@@ -1,12 +1,13 @@
 body {
 	background-color: #fff9f5;
-	background-image: url("../../images/bg-balloons.png");
+	background-image: url("../../../images/bg-balloons.png");
 	background-repeat: repeat;
 	background-size: 300px auto;
 	background-attachment: fixed;
 	color: #444;
 	font-family: 'Noto Sans TC', sans-serif;
 }
+
 
 /* 網站標題字色 */
 h1, h2, h3, h4, h5, h6 {
