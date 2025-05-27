@@ -1,3 +1,10 @@
+body {
+	background-color: #fff9f5;
+	background-image: url("../../images/bg-balloons.png");
+	background-repeat: repeat;
+	background-size: 300px auto;
+	background-attachment: fixed;
+}
 /* === 氣球大叔 Sony 專屬優化配色 & 排版 === */
 
 /* 淡色背景，舒適可愛 */
