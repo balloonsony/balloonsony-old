@@ -1,3 +1,50 @@
+/* === 氣球大叔 Sony 專屬風格：紅橘可愛配色 === */
+body {
+	background-color: #fff9f5;
+	color: #444;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+a {
+	color: #e67e22;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #d35400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #d35400;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+.button {
+	background-color: #e67e22;
+	border-color: #e67e22;
+	color: white;
+}
+
+.button:hover {
+	background-color: #d35400;
+	border-color: #d35400;
+}
+
+header.major h2::after {
+	background-color: #e67e22;
+}
+
+.icon {
+	color: #e67e22;
+}
+
+#footer {
+	background: #fff2ea;
+}
+
+#footer h2, #footer li {
+	color: #444;
+}
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 /*
