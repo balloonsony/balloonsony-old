@@ -1,3 +1,36 @@
+/* === 氣球大叔 Sony 額外樣式（保留主題原樣）=== */
+
+/* 讓標題變大 */
+#header h1 {
+	font-size: 2.5em;
+	font-weight: bold;
+	margin: 0;
+}
+
+/* 四個表演項目 - 兩欄排版 */
+.features {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 2em;
+}
+
+/* 卡片樣式強化 */
+.features article {
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 8px;
+	padding: 1.5em;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+	transition: transform 0.2s ease;
+}
+.features article:hover {
+	transform: translateY(-3px);
+}
+.features .icon {
+	font-size: 2em;
+	color: #e67e22;
+	margin-bottom: 0.5em;
+}
 /* === 氣球大叔 Sony 簡潔風格最終版 === */
 
 body {
