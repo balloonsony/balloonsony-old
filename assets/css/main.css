@@ -34,9 +34,16 @@ body {
 /* 表演項目：卡片樣式 */
 .features {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-template-columns: repeat(2, 1fr); /* 電腦上顯示兩欄 */
 	gap: 2em;
 }
+
+@media screen and (max-width: 768px) {
+	.features {
+		grid-template-columns: 1fr; /* 手機顯示單欄 */
+	}
+}
+
 .features article {
 	background: #fff;
 	border: 1px solid #eee;
