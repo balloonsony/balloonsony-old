@@ -1,50 +1,86 @@
-/* === 氣球大叔 Sony 專屬風格：紅橘可愛配色 === */
+/* === 氣球大叔 Sony 專屬優化配色 & 排版 === */
+
+/* 淡色背景，舒適可愛 */
 body {
 	background-color: #fff9f5;
 	color: #444;
 	font-family: 'Noto Sans TC', sans-serif;
 }
 
-a {
-	color: #e67e22;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #d35400;
-}
-
+/* 網站標題字色 */
 h1, h2, h3, h4, h5, h6 {
 	color: #d35400;
 	font-family: 'Noto Sans TC', sans-serif;
 }
 
+/* 連結與 hover 效果 */
+a {
+	color: #e67e22;
+	text-decoration: none;
+}
+a:hover {
+	color: #d35400;
+}
+
+/* 按鈕樣式 */
 .button {
 	background-color: #e67e22;
 	border-color: #e67e22;
 	color: white;
 }
-
 .button:hover {
 	background-color: #d35400;
 	border-color: #d35400;
 }
 
-header.major h2::after {
-	background-color: #e67e22;
-}
-
+/* icon 顏色 */
 .icon {
 	color: #e67e22;
 }
 
+/* 側欄背景（左側） */
+#sidebar {
+	background: #fff3eb;  /* 更柔和的米色 */
+}
+
+/* Footer 底部 */
 #footer {
 	background: #fff2ea;
 }
-
 #footer h2, #footer li {
 	color: #444;
 }
+
+/* Banner 圖片與文字調整 */
+#banner {
+	text-align: center;
+	padding: 3em 1em 3em 1em;
+}
+#banner h2 {
+	font-size: 2em;
+}
+#banner p {
+	font-size: 1.2em;
+	margin-top: 0.5em;
+}
+#banner img {
+	max-width: 90%;
+	height: auto;
+	margin-top: 1em;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 響應式微調：手機版字不要太擠 */
+@media screen and (max-width: 736px) {
+	#banner h2 {
+		font-size: 1.5em;
+	}
+	#banner p {
+		font-size: 1em;
+	}
+}
+
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 /*
