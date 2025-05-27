@@ -1,28 +1,24 @@
-/* === 氣球大叔 Sony 乾淨修正版 === */
+/* === 氣球大叔 Sony 簡潔風格最終版 === */
 
 body {
-	background-color: #fff9f5;
-	background-image: url("../../../images/bg-balloons.png");
-	background-repeat: repeat;
-	background-size: 180px auto;
-	background-attachment: fixed;
+	background-color: #ffffff;
 	color: #444;
 	font-family: 'Noto Sans TC', sans-serif;
 }
 
-/* 頁首品牌標題適度放大 */
+/* Header 內品牌標題放大但不誇張 */
 #header h1 {
 	font-size: 2.5em;
+	font-weight: bold;
 	margin: 0;
-	line-height: 1.2;
 }
 #header p {
 	margin-top: 0.5em;
-	color: #666;
 	font-size: 1.1em;
+	color: #666;
 }
 
-/* 表演項目四個：兩欄（手機一欄） */
+/* 表演項目區塊：4 個排版、原生感 */
 .features {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -32,13 +28,13 @@ body {
 .features article {
 	background: #fff;
 	border: 1px solid #eee;
-	border-radius: 10px;
+	border-radius: 8px;
 	padding: 1.5em;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 	transition: transform 0.2s ease;
 }
 .features article:hover {
-	transform: translateY(-5px);
+	transform: translateY(-3px);
 }
 .features .icon {
 	font-size: 2em;
@@ -46,7 +42,7 @@ body {
 	margin-bottom: 0.5em;
 }
 
-/* 作品集三欄排版 */
+/* 作品集圖片三欄排版 */
 .posts {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -54,25 +50,25 @@ body {
 }
 .posts article img {
 	width: 100%;
-	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	border-radius: 6px;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.05);
 	transition: transform 0.2s ease;
 }
 .posts article img:hover {
-	transform: scale(1.03);
+	transform: scale(1.02);
 }
 
-/* LINE 按鈕 */
+/* LINE 按鈕樣式 */
 a.button.fa-line {
 	background-color: #06c755;
-	border: none;
 	color: white;
+	border: none;
 }
 a.button.fa-line:hover {
 	background-color: #059e45;
 }
 
-/* 鏈結 hover 效果 */
+/* 通用連結樣式 */
 a {
 	color: #e67e22;
 	text-decoration: none;
