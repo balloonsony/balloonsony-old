@@ -1,18 +1,18 @@
-/* === 氣球大叔 Sony 專屬主題 CSS - 完整版 === */
+/* === 氣球大叔 Sony 乾淨修正版 === */
 
 body {
 	background-color: #fff9f5;
 	background-image: url("../../../images/bg-balloons.png");
 	background-repeat: repeat;
-	background-size: 300px auto;
+	background-size: 180px auto;
 	background-attachment: fixed;
 	color: #444;
 	font-family: 'Noto Sans TC', sans-serif;
 }
 
-/* 頁首品牌區塊：氣球大叔 Sony 標題更大 */
+/* 頁首品牌標題適度放大 */
 #header h1 {
-	font-size: 4em;
+	font-size: 2.5em;
 	margin: 0;
 	line-height: 1.2;
 }
@@ -22,50 +22,19 @@ body {
 	font-size: 1.1em;
 }
 
-/* 選單項目標題字體 */
-h1, h2, h3, h4, h5, h6 {
-	color: #d35400;
-	font-family: 'Noto Sans TC', sans-serif;
-}
-
-/* Banner：左圖右文 */
-#banner {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	gap: 2em;
-	padding: 3em 0;
-}
-#banner .content {
-	flex: 1 1 55%;
-}
-#banner .image {
-	flex: 1 1 40%;
-}
-#banner img {
-	width: 100%;
-	border-radius: 12px;
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* 表演項目：四個項目，兩欄排版 */
+/* 表演項目四個：兩欄（手機一欄） */
 .features {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 	gap: 2em;
-}
-@media screen and (max-width: 768px) {
-	.features {
-		grid-template-columns: 1fr;
-	}
+	margin-top: 2em;
 }
 .features article {
 	background: #fff;
 	border: 1px solid #eee;
 	border-radius: 10px;
 	padding: 1.5em;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 	transition: transform 0.2s ease;
 }
 .features article:hover {
@@ -77,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0.5em;
 }
 
-/* 作品集區塊：三欄圖片 */
+/* 作品集三欄排版 */
 .posts {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -93,18 +62,6 @@ h1, h2, h3, h4, h5, h6 {
 	transform: scale(1.03);
 }
 
-/* 聯絡方式區塊 */
-ul.contact li {
-	margin-bottom: 0.8em;
-	font-size: 1em;
-}
-ul.contact li a {
-	color: #e67e22;
-}
-ul.contact li.icon {
-	font-size: 1.1em;
-}
-
 /* LINE 按鈕 */
 a.button.fa-line {
 	background-color: #06c755;
@@ -115,7 +72,7 @@ a.button.fa-line:hover {
 	background-color: #059e45;
 }
 
-/* 網站連結 hover 效果 */
+/* 鏈結 hover 效果 */
 a {
 	color: #e67e22;
 	text-decoration: none;
