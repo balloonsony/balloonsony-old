@@ -4,59 +4,72 @@
   <title>氣球大叔 Sony</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="氣球大叔 Sony 提供氣球魔術表演、泡泡秀、造型氣球、會場佈置等服務，適合各類活動與節慶。" />
+  <meta name="keywords" content="氣球魔術, 泡泡秀, 造型氣球, 會場佈置, 台北氣球表演, 新北氣球魔術, 桃園泡泡秀" />
   <link rel="stylesheet" href="assets/css/main.css" />
-
-  <!-- SEO -->
-  <meta name="description" content="氣球大叔 Sony 提供全台灣氣球魔術表演、泡泡秀、造型氣球、會場佈置，服務地區包含台北、新北、基隆、桃園、新竹、台中、彰化等，歡迎到府表演洽詢。" />
-  <meta name="keywords" content="桃園氣球魔術, 基隆泡泡秀, 台中造型氣球, 台北活動表演, 氣球大叔, 親子活動表演者" />
-  <meta name="author" content="氣球大叔 Sony" />
-
-  <!-- 放大效果 CSS -->
   <style>
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2em;
+    }
+
+    @media screen and (max-width: 768px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .feature-link {
+      display: block;
       text-decoration: none;
       color: inherit;
-      display: block;
+      transition: transform 0.3s ease;
     }
 
     .feature-link article {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .feature-link article:hover {
       transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    body.fade-in {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
   </style>
-
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
-
-  <!-- Wrapper -->
+<body class="is-preload fade-in">
   <div id="wrapper">
-
-    <!-- Main -->
+    <!-- 主內容 -->
     <div id="main">
       <div class="inner">
 
-        <!-- Header -->
+        <!-- 標頭 -->
         <header id="header">
-          <h1 style="font-size: 4em; margin: 0;">氣球大叔 Sony</h1>
+          <h1>氣球大叔 Sony</h1>
           <p>魔術、氣球、泡泡秀、會場佈置的專業表演者</p>
         </header>
 
-        <!-- Banner -->
+        <!-- 橫幅區塊 -->
         <section id="banner" class="style1">
           <div class="content">
             <header>
               <h1>歡迎來到氣球大叔的魔幻世界</h1>
-              <p>專業演出 ✕ 滿滿驚喜 ✕ 繽紛歡樂</p>
+              <p>專業演出 × 滿滿驚喜 × 笑聲不斷</p>
             </header>
-            <p>我是氣球大叔 Sony，一位結合魔術與藝術的表演者，擁有多年活動經驗，服務包含親子派對、商業活動、節慶活動與場佈。</p>
+            <p>我是氣球大叔 Sony，經驗豐富的專業表演者，服務包含親子活動、商業活動、節慶活動與場地佈置。</p>
           </div>
           <span class="image object">
-            <img src="images/pic01.jpg" alt="假圖" />
+            <img src="images/pic01.jpg" alt="氣球大叔表演照片" />
           </span>
         </section>
 
@@ -72,7 +85,7 @@
                 <span class="icon solid fa-magic"></span>
                 <div class="content">
                   <h3>🎭 氣球魔術舞台秀</h3>
-                  <p>結合魔術與氣球，搭配現場觀眾互動，帶來 30 分鐘滿滿笑聲！</p>
+                  <p>結合魔術與氣球，互動讓現場爆笑！</p>
                 </div>
               </article>
             </a>
@@ -82,7 +95,7 @@
                 <span class="icon solid fa-bahai"></span>
                 <div class="content">
                   <h3>🔮 大型泡泡秀 & 泡泡體驗</h3>
-                  <p>結合泡泡魔法舞台表演與泡泡拍照體驗，吸睛又夢幻！</p>
+                  <p>泡泡魔術動態上場，換裝魔法合照區！</p>
                 </div>
               </article>
             </a>
@@ -92,7 +105,7 @@
                 <span class="icon solid fa-star"></span>
                 <div class="content">
                   <h3>🎈 現場造型氣球</h3>
-                  <p>即場手作卡通造型氣球，深受小朋友喜愛！</p>
+                  <p>現場工作卡通氣球，小朋友愛不釋手！</p>
                 </div>
               </article>
             </a>
@@ -102,7 +115,7 @@
                 <span class="icon solid fa-gift"></span>
                 <div class="content">
                   <h3>🎉 會場氣球佈置</h3>
-                  <p>打造拱門、打卡牆與主題布置，活動現場超吸睛！</p>
+                  <p>主題照相區、打卡牆、歡樂全場節奏！</p>
                 </div>
               </article>
             </a>
@@ -110,39 +123,14 @@
           </div>
         </section>
 
-        <!-- 作品集 -->
-        <section id="portfolio">
-          <header class="major">
-            <h2>作品集</h2>
-          </header>
-          <div class="posts">
-            <article><a href="https://photos.app.goo.gl/P4qoZASn8RbBZQJR9" target="_blank"><img src="images/pic02.jpg" alt="魔術演出照片" /></a></article>
-            <article><a href="https://photos.app.goo.gl/UbhgkK45wfSU5xYT9" target="_blank"><img src="images/pic03.jpg" alt="氣球派送作品" /></a></article>
-            <article><a href="https://photos.app.goo.gl/J9r64s9SD4RbMqkeA" target="_blank"><img src="images/pic04.jpg" alt="泡泡秀活動" /></a></article>
-            <article><a href="https://photos.app.goo.gl/hpEsURP6r3SDYQR27" target="_blank"><img src="images/pic05.jpg" alt="會場佈置實拍" /></a></article>
-          </div>
-        </section>
-
-        <!-- 聯絡方式 -->
-        <section id="contact">
-          <header class="major"><h2>聯絡方式</h2></header>
-          <ul class="contact">
-            <li class="icon brands fa-line">
-              <span style="margin-right: 10px;">LINE：</span>
-              <a href="https://line.me/R/ti/p/@balloonsony" class="button small" style="font-size: 0.8em;">加入我的 LINE</a>
-            </li>
-            <li class="icon solid fa-phone">電話：0930-733-100</li>
-            <li class="icon brands fa-instagram"><a href="https://instagram.com/balloonsony" target="_blank">@balloonsony</a></li>
-            <li class="icon brands fa-facebook"><a href="https://facebook.com/YOUR_PAGE_NAME" target="_blank">粉絲團</a></li>
-          </ul>
-        </section>
-
       </div>
     </div>
 
-    <!-- Sidebar -->
+    <!-- 側邊選單 -->
     <div id="sidebar">
       <div class="inner">
+
+        <!-- 選單 -->
         <nav id="menu">
           <header class="major"><h2>選單</h2></header>
           <ul>
@@ -161,21 +149,53 @@
           </ul>
         </nav>
 
-        <!-- Footer -->
+        <!-- 聯絡方式 -->
+        <section>
+          <header class="major"><h2>聯絡方式</h2></header>
+          <ul class="contact">
+            <li class="icon brands fa-line">
+              <span style="display:inline-block; margin-right:10px;">LINE：</span>
+              <a href="https://line.me/R/ti/p/@balloonsony" class="button small" style="display:inline-block; padding:0.4em 1em; font-size:0.8em; margin:0;">加入我的 LINE</a>
+            </li>
+            <li class="icon solid fa-phone">電話：0930-733-100</li>
+            <li class="icon brands fa-instagram"><a href="#">@balloonsony</a></li>
+            <li class="icon brands fa-facebook"><a href="#">粉絲團</a></li>
+          </ul>
+        </section>
+
+        <!-- 頁尾 -->
         <footer id="footer">
           <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
         </footer>
+
       </div>
     </div>
-
   </div>
 
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 
+  <!-- 頁面轉場效果 -->
+  <script>
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', function (e) {
+          if (!link.target || link.target === '_self') {
+            e.preventDefault();
+            document.body.classList.remove('fade-in');
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+              window.location.href = href;
+            }, 300);
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
