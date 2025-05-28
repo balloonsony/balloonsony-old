@@ -7,6 +7,7 @@
   <meta name="description" content="氣球大叔 Sony 提供氣球魔術秀服務，融合魔術與氣球的舞台演出，適合親子活動、商演、學校節慶等場合，歡迎預約！" />
   <meta name="keywords" content="氣球魔術, 魔術表演, 台北魔術, 新北魔術, 桃園氣球表演, 表演者推薦" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
     body.fade-out {
       opacity: 0;
@@ -35,46 +36,43 @@
       max-width: 400px;
       border-radius: 8px;
     }
+    .fixed-home-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+      font-size: 0.85em;
+      opacity: 0.9;
+    }
+    .seo-toggle {
+      display: block;
+      margin-top: 3em;
+      font-size: 0.9em;
+      cursor: pointer;
+      color: #999;
+      text-decoration: underline;
+    }
+    #seo-keywords {
+      display: none;
+      font-size: 0.85em;
+      color: #aaa;
+      line-height: 1.6em;
+      margin-top: 1em;
+    }
     @media (max-width: 600px) {
       .posts {
         flex-direction: column;
         align-items: center;
-        .fixed-home-button {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 999;
-  font-size: 0.85em;
-  opacity: 0.9;
-}
-
-.seo-toggle {
-  display: block;
-  margin-top: 3em;
-  font-size: 0.9em;
-  cursor: pointer;
-  color: #999;
-  text-decoration: underline;
-}
-
-#seo-keywords {
-  display: none;
-  font-size: 0.85em;
-  color: #aaa;
-  line-height: 1.6em;
-  margin-top: 1em;
-}
-
       }
     }
   </style>
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="fade-in">
 
-  <div class="container">
-    <a href="index.html" class="button icon solid fa-home back-home">🏠 回首頁</a>
+  <!-- 固定回首頁按鈕 -->
+  <a href="index.html" class="button icon solid fa-home fixed-home-button">回首頁</a>
 
+  <div class="container">
     <header>
       <h1>魔術表演</h1>
       <p>融合魔術與氣球，打造舞台魅力與歡笑的精彩演出</p>
@@ -101,6 +99,20 @@
         👉 <a href="https://photos.app.goo.gl/P4qoZASn8RbBZQJR9" target="_blank">點我看更多演出相簿</a>
       </p>
     </section>
+
+    <!-- SEO 區塊 -->
+    <div class="seo-section">
+      <span class="seo-toggle" onclick="toggleSEO()">點此顯示服務地區 SEO</span>
+      <div id="seo-keywords">
+        氣球大叔提供全台服務地區：
+        台北氣球、台北魔術、台北泡泡秀、新北氣球表演、新北泡泡、桃園親子活動演出、
+        新竹泡泡秀、苗栗造型氣球、台中表演者、彰化場佈、南投氣球魔術、高雄泡泡魔術、
+        台南魔術秀、宜蘭氣球表演、基隆節目主持、雲林魔術互動表演、嘉義親子魔術、
+        屏東舞台氣球表演、花蓮氣球活動推薦、台東泡泡秀預約...等。
+        可依活動場地提供北中南各縣市的表演與佈置服務，包含室內外場地，配合度高，適合商演、學校、社區、百貨、政府活動、親子市集等。
+      </div>
+    </div>
+
   </div>
 
   <!-- Scripts -->
@@ -121,6 +133,12 @@
         });
       }
     });
+
+    // SEO 折疊功能
+    function toggleSEO() {
+      const seoBlock = document.getElementById('seo-keywords');
+      seoBlock.style.display = (seoBlock.style.display === 'none' || seoBlock.style.display === '') ? 'block' : 'none';
+    }
   </script>
 
 </body>
