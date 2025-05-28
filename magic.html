@@ -12,9 +12,9 @@
     .seo-toggle {
       display: block;
       margin-top: 2em;
-      font-size: 0.9em;
+      font-size: 0.65em;
       cursor: pointer;
-      color: #999;
+      color: #bbb;
       text-decoration: underline;
     }
     #seo-keywords {
@@ -28,17 +28,18 @@
 </head>
 <body class="is-preload">
   <div id="wrapper">
-    <!-- 主內容 -->
+
+    <!-- Main -->
     <div id="main">
       <div class="inner">
 
-        <!-- 標頭 -->
+        <!-- Header -->
         <header id="header">
           <h1>魔術表演</h1>
           <p>結合氣球造型與互動魔術，打造最吸睛的演出體驗</p>
         </header>
 
-        <!-- 魔術內容介紹 -->
+        <!-- Content -->
         <section>
           <h2>氣球魔術秀</h2>
           <p>氣球大叔 Sony 專注於結合魔術與氣球藝術，打造獨特且歡樂的氣球魔術秀。此演出融合互動表演、舞台氣氛營造與視覺驚喜，是親子活動、學校慶典、百貨表演與企業活動的最佳選擇。</p>
@@ -66,8 +67,8 @@
             👉 <a href="https://photos.app.goo.gl/P4qoZASn8RbBZQJR9" target="_blank">看更多魔術表演相簿</a>
           </p>
 
-          <!-- 折疊區：魔術地區關鍵字 -->
-          <span class="seo-toggle" onclick="toggleSEO()">點我展開：魔術表演服務地區</span>
+          <!-- 折疊 SEO 區塊 -->
+          <span class="seo-toggle" onclick="toggleSEO()">🔍 點我展開：魔術表演服務地區</span>
           <div id="seo-keywords">
             氣球大叔 Sony 提供魔術相關表演服務於全台地區：<br/>
             台北魔術表演、新北魔術表演、桃園魔術演出、新竹魔術互動、基隆生日魔術、苗栗親子魔術、台中魔術秀、彰化氣球魔術、南投氣球魔術、台南商演魔術、高雄親子魔術、屏東氣球魔術、宜蘭魔術活動、花蓮街頭魔術演出、台東魔術推薦。
@@ -77,7 +78,7 @@
       </div>
     </div>
 
-    <!-- 側邊選單：與首頁一致 -->
+    <!-- Sidebar -->
     <div id="sidebar">
       <div class="inner">
 
@@ -130,7 +131,7 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- SEO 摺疊效果 JS -->
+  <!-- SEO 摺疊功能 -->
   <script>
     function toggleSEO() {
       const seoBlock = document.getElementById('seo-keywords');
