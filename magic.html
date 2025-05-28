@@ -12,76 +12,74 @@
     .seo-toggle {
       display: block;
       margin-top: 2em;
-      font-size: 0.65em;
+      font-size: 0.8em;
       cursor: pointer;
-      color: #bbb;
+      color: #999;
       text-decoration: underline;
     }
     #seo-keywords {
       display: none;
-      font-size: 0.85em;
+      font-size: 0.75em;
       color: #aaa;
       line-height: 1.6em;
       margin-top: 1em;
+    }
+    .posts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    .posts img {
+      width: 100%;
+      max-width: 400px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body class="is-preload">
   <div id="wrapper">
-
-    <!-- Main -->
+    <!-- 主內容 -->
     <div id="main">
       <div class="inner">
-
-        <!-- Header -->
+        <!-- 標頭 -->
         <header id="header">
           <h1>魔術表演</h1>
           <p>結合氣球造型與互動魔術，打造最吸睛的演出體驗</p>
         </header>
-
-        <!-- Content -->
+        <!-- 魔術內容介紹 -->
         <section>
           <h2>氣球魔術秀</h2>
           <p>氣球大叔 Sony 專注於結合魔術與氣球藝術，打造獨特且歡樂的氣球魔術秀。此演出融合互動表演、舞台氣氛營造與視覺驚喜，是親子活動、學校慶典、百貨表演與企業活動的最佳選擇。</p>
-
           <ul>
             <li>演出時間：約 30 分鐘</li>
             <li>氣球贈送：18 件現場造型氣球</li>
             <li>服務地區：全台皆可，台北新北桃園最多</li>
             <li>適合場地：百貨公司、市集舞台、學校園遊會、戶外活動</li>
           </ul>
-
           <h3>魔術互動亮點</h3>
-          <p>
-            現場表演不僅帶來神奇視覺體驗，更透過與觀眾互動的橋段增加參與感，
-            包含漂浮魔術、變色魔術、出現氣球動物等橋段，深受孩子與家長喜愛。
-          </p>
-
+          <p>現場表演不僅帶來神奇視覺體驗，更透過與觀眾互動的橋段增加參與感，包含漂浮魔術、變色魔術、出現氣球動物等橋段，深受孩子與家長喜愛。</p>
           <h3>演出照片</h3>
           <div class="posts">
-            <article><img src="images/pic02.jpg" alt="魔術表演照片" /></article>
-            <article><img src="images/pic03.jpg" alt="舞台互動照片" /></article>
+            <img src="images/magic1.jpg" alt="魔術表演照片" />
+            <img src="images/magic2.jpg" alt="舞台互動照片" />
           </div>
-
           <p style="margin-top: 1em;">
             👉 <a href="https://photos.app.goo.gl/P4qoZASn8RbBZQJR9" target="_blank">看更多魔術表演相簿</a>
           </p>
-
-          <!-- 折疊 SEO 區塊 -->
-          <span class="seo-toggle" onclick="toggleSEO()">🔍 點我展開：魔術表演服務地區</span>
+          <!-- 折疊區：魔術地區關鍵字 -->
+          <span class="seo-toggle" onclick="toggleSEO()">點我展開：魔術表演服務地區</span>
           <div id="seo-keywords">
             氣球大叔 Sony 提供魔術相關表演服務於全台地區：<br/>
             台北魔術表演、新北魔術表演、桃園魔術演出、新竹魔術互動、基隆生日魔術、苗栗親子魔術、台中魔術秀、彰化氣球魔術、南投氣球魔術、台南商演魔術、高雄親子魔術、屏東氣球魔術、宜蘭魔術活動、花蓮街頭魔術演出、台東魔術推薦。
           </div>
         </section>
-
       </div>
     </div>
-
-    <!-- Sidebar -->
+    <!-- 側邊選單：與首頁一致 -->
     <div id="sidebar">
       <div class="inner">
-
         <!-- Menu -->
         <nav id="menu">
           <header class="major"><h2>選單</h2></header>
@@ -100,7 +98,6 @@
             <li><a href="index.html#contact">聯絡方式</a></li>
           </ul>
         </nav>
-
         <!-- Contact Info -->
         <section>
           <header class="major"><h2>聯絡方式</h2></header>
@@ -114,24 +111,19 @@
             <li class="icon brands fa-facebook"><a href="#">粉絲團</a></li>
           </ul>
         </section>
-
         <footer id="footer">
           <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
         </footer>
-
       </div>
     </div>
-
   </div>
-
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
-
-  <!-- SEO 摺疊功能 -->
+  <!-- SEO 摺疊效果 JS -->
   <script>
     function toggleSEO() {
       const seoBlock = document.getElementById('seo-keywords');
