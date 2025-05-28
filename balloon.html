@@ -4,22 +4,33 @@
   <title>造型氣球｜氣球大叔 Sony</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="氣球大叔 Sony 提供現場造型氣球服務，快速捏製各式卡通動物、角色氣球，適合兒童派對、百貨市集、社區活動。" />
-  <meta name="keywords" content="台北造型氣球, 桃園卡通氣球, 新北氣球表演, 氣球捏製活動, 快速捏氣球, 小丑氣球表演, 兒童氣球捏造, 派對氣球互動" />
+  <meta name="description" content="氣球大叔 Sony 專業提供造型氣球服務，快速製作各類可愛卡通角色、動物與愛心劍氣球，適合校慶、市集、百貨開幕與親子派對。" />
+  <meta name="keywords" content="台北造型氣球, 新北氣球師, 桃園氣球表演, 校園氣球活動, 氣球教學, 商場現場氣球" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
+    .posts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+    }
+    .posts img {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 8px;
+    }
     .seo-toggle {
       display: block;
       margin-top: 2em;
-      font-size: 0.65em;
+      font-size: 0.8em;
       cursor: pointer;
-      color: #bbb;
+      color: #999;
       text-decoration: underline;
     }
     #seo-keywords {
       display: none;
-      font-size: 0.85em;
+      font-size: 0.8em;
       color: #aaa;
       line-height: 1.6em;
       margin-top: 1em;
@@ -30,11 +41,14 @@
   <div id="wrapper">
     <div id="main">
       <div class="inner">
+
+        <!-- Header -->
         <header id="header">
           <h1>造型氣球</h1>
           <p>現場捏氣球 ✕ 快速互動 ✕ 孩子最愛</p>
         </header>
 
+        <!-- Content -->
         <section>
           <h2>現場造型氣球</h2>
           <p>氣球大叔 Sony 專業提供氣球造型服務，現場快速捏製各種可愛氣球，包含卡通角色、動物、愛心劍等，適合各年齡層、各種活動規模。</p>
@@ -47,25 +61,29 @@
 
           <h3>活動實拍</h3>
           <div class="posts">
-            <article><img src="images/pic06.jpg" alt="氣球捏製照片" /></article>
-            <article><img src="images/pic07.jpg" alt="小朋友領取氣球" /></article>
+            <img src="images/pic06.jpg" alt="現場氣球製作" />
+            <img src="images/pic07.jpg" alt="氣球造型展示" />
           </div>
 
           <p style="margin-top: 1em;">
-            👉 <a href="https://photos.app.goo.gl/UbhgkK45wfSU5xYT9" target="_blank">看更多氣球作品</a>
+            👉 <a href="https://photos.app.goo.gl/UbhgkK45wfSU5xYT9" target="_blank">看更多氣球造型作品</a>
           </p>
 
-          <span class="seo-toggle" onclick="toggleSEO()">點我展開：造型氣球服務地區</span>
+          <!-- SEO 摺疊區塊 -->
+          <span class="seo-toggle" onclick="toggleSEO()">點我展開：造型氣球服務地區 SEO</span>
           <div id="seo-keywords">
-            提供造型氣球服務地區：台北氣球造型、新北氣球活動、桃園現場氣球、新竹氣球市集、基隆氣球捏造、苗栗氣球互動、台中氣球小丑、彰化氣球表演、南投氣球派對、高雄氣球演出、台南卡通氣球、屏東快速捏氣球、花蓮造型表演、台東兒童活動氣球。
+            提供造型氣球服務地區包含：<br/>
+            台北氣球師、新北現場造型氣球、桃園氣球互動、新竹氣球捏製、基隆卡通氣球、苗栗氣球表演、台中造型氣球活動、彰化親子氣球秀、南投手作氣球、台南捏氣球服務、高雄現場氣球表演、屏東氣球老師、宜蘭活動氣球表演、花蓮氣球氣氛設計、台東氣球藝術工作坊等。
           </div>
         </section>
+
       </div>
     </div>
 
-    <!-- Sidebar 與首頁一致 -->
+    <!-- Sidebar -->
     <div id="sidebar">
       <div class="inner">
+
         <nav id="menu">
           <header class="major"><h2>選單</h2></header>
           <ul>
@@ -84,27 +102,34 @@
           </ul>
         </nav>
 
+        <!-- Contact -->
         <section>
           <header class="major"><h2>聯絡方式</h2></header>
           <ul class="contact">
-            <li class="icon brands fa-line"><a href="https://line.me/R/ti/p/@balloonsony">加入 LINE：@balloonsony</a></li>
+            <li class="icon brands fa-line">
+              <span style="display: inline-block; margin-right: 10px;">LINE：</span>
+              <a href="https://line.me/R/ti/p/@balloonsony" class="button small">加入我的 LINE</a>
+            </li>
             <li class="icon solid fa-phone">電話：0930-733-100</li>
             <li class="icon brands fa-instagram"><a href="#">@balloonsony</a></li>
             <li class="icon brands fa-facebook"><a href="#">粉絲團</a></li>
           </ul>
         </section>
 
-        <footer id="footer"><p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p></footer>
+        <footer id="footer">
+          <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
+        </footer>
+
       </div>
     </div>
   </div>
 
+  <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
-
   <script>
     function toggleSEO() {
       const seoBlock = document.getElementById('seo-keywords');
