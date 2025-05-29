@@ -9,10 +9,13 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-    body.fade-out {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
+  body.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+</style>
+
+  <style>
     .posts {
       display: flex;
       flex-wrap: wrap;
@@ -25,23 +28,20 @@
       object-fit: cover;
       border-radius: 8px;
     }
-    .faq-block {
+    .seo-toggle {
+      display: block;
       margin-top: 2em;
-      font-size: 1em;
-      line-height: 1.8em;
+      font-size: 0.8em;
+      cursor: pointer;
+      color: #999;
+      text-decoration: underline;
     }
-    .faq-block h3 {
-      margin-bottom: 0.2em;
-      color: #333;
-    }
-    .faq-block p {
-      margin-bottom: 1.5em;
-      color: #666;
-    }
-    .seo-block {
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 2em;
+    #seo-keywords {
+      display: none;
+      font-size: 0.8em;
+      color: #aaa;
+      line-height: 1.6em;
+      margin-top: 1em;
     }
   </style>
 </head>
@@ -69,59 +69,47 @@
 
           <h3>活動實拍</h3>
           <div class="posts">
-            <img src="images/pic06.jpg" alt="現場氣球製作" loading="lazy" />
-            <img src="images/pic07.jpg" alt="氣球造型展示" loading="lazy" />
-            <img src="images/pic08.jpg" alt="卡通造型氣球作品" loading="lazy" />
-            <img src="images/pic09.jpg" alt="親子活動氣球現場" loading="lazy" />
+            <img src="images/pic06.jpg" alt="現場氣球製作" />
+            <img src="images/pic07.jpg" alt="氣球造型展示" />
           </div>
 
           <p style="margin-top: 1em;">
             👉 <a href="https://photos.app.goo.gl/UbhgkK45wfSU5xYT9" target="_blank">看更多氣球造型作品</a>
           </p>
 
-          <div class="seo-block">
-  <details>
-    <summary>每個地方，都有氣球的歡樂身影</summary>
-    <p>
-      無論是創意氣球表演、趣味互動、卡通造型，還是婚禮場地佈置與大型活動拱門，我們都能提供專業氣球師為您打造驚喜效果。<br>
-      氣球的魅力不只是裝飾，更是一種節慶的氛圍營造與現場亮點！<br><br>
+          <!-- SEO 摺疊區塊 -->
+          <span class="seo-toggle" onclick="toggleSEO()">每個地方，都有氣球的歡樂身影</span>
+          <div id="seo-keywords">
+            <details>
+  <summary>🎈 氣球表演與造型佈置｜服務北中全區</summary>
+  <p>
+    無論是創意氣球表演、趣味互動、卡通造型，還是婚禮場地佈置與大型活動拱門，我們都能提供專業氣球師為您打造驚喜效果。<br>
+    氣球的魅力不只是裝飾，更是一種節慶的氛圍營造與現場亮點！<br><br>
 
-      ✅ <strong>服務地區：</strong><br>
-      我們的氣球服務目前涵蓋：台北、新北、基隆、桃園、新竹、苗栗、台中、彰化、宜蘭等縣市，歡迎活動、企業、社區、婚禮邀約。<br><br>
+    ✅ <strong>服務地區：</strong><br>
+    我們的氣球服務目前涵蓋：台北、新北、基隆、桃園、新竹、苗栗、台中、彰化、宜蘭等縣市，歡迎活動、企業、社區、婚禮邀約。<br><br>
 
-      ✅ <strong>熱門氣球關鍵字：</strong><br>
-      台北氣球表演、台北氣球造型、台北婚禮氣球佈置、台北拱門氣球裝飾、<br>
-      桃園氣球秀、桃園生日氣球、桃園會場氣球佈置、桃園活動氣球表演、<br>
-      新竹氣球佈置、新竹兒童氣球秀、新竹氣球藝術、<br>
-      台中氣球演出、台中婚禮佈置氣球、台中拱門裝飾、<br>
-      宜蘭氣球表演、苗栗氣球佈置、彰化氣球造型、<br>
-      ...各地活動場景都可依需求客製化設計。<br><br>
+    ✅ <strong>熱門氣球關鍵字：</strong><br>
+    台北氣球表演、台北氣球造型、台北婚禮氣球佈置、台北拱門氣球裝飾、<br>
+    桃園氣球秀、桃園生日氣球、桃園會場氣球佈置、桃園活動氣球表演、<br>
+    新竹氣球佈置、新竹兒童氣球秀、新竹氣球藝術、<br>
+    台中氣球演出、台中婚禮佈置氣球、台中拱門裝飾、<br>
+    宜蘭氣球表演、苗栗氣球佈置、彰化氣球造型、<br>
+    ...各地活動場景都可依需求客製化設計。<br><br>
 
-      🎊 我們不只吹氣球，我們創造氣氛！讓每一場活動因氣球而多一分驚喜與感動。
-    </p>
-  </details>
-</div>
-          
-<div style="margin-top: 3em;"></div>
-
-          <h2>常見問題 FAQ</h2>
-          <div class="faq-block">
-            <h3>Q：活動當天可以彈性調整出場時間嗎？</h3>
-            <p>可以，我們會提前與主辦方確認流程，並可彈性配合現場需求，協調前後節目安排。</p>
-
-            <h3>Q：氣球會不會很容易爆？</h3>
-            <p>我們使用專業品牌的高彈性氣球，搭配現場氣候與場地條件做出最佳選擇。除非極端天氣或不當碰觸，氣球基本上不易破損。</p>
-
-            <h3>Q：氣球可以做什麼造型？</h3>
-            <p>我們提供超過 20 種熱門造型，包括卡通角色、愛心劍、小狗、小花、皇冠、蜂鳥等，並接受主題訂製。</p>
+    🎊 我們不只吹氣球，我們創造氣氛！讓每一場活動因氣球而多一分驚喜與感動。
+  </p>
+</details>
           </div>
         </section>
+
       </div>
     </div>
 
     <!-- Sidebar -->
     <div id="sidebar">
       <div class="inner">
+
         <nav id="menu">
           <header class="major"><h2>選單</h2></header>
           <ul>
@@ -157,6 +145,7 @@
         <footer id="footer">
           <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
         </footer>
+
       </div>
     </div>
   </div>
@@ -168,54 +157,27 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
-    document.querySelectorAll('a[href]').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
-        link.addEventListener('click', e => {
-          if (!link.target || link.target === '_self') {
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-              window.location.href = href;
-            }, 300);
-          }
-        });
-      }
-    });
+    function toggleSEO() {
+      const seoBlock = document.getElementById('seo-keywords');
+      seoBlock.style.display = (seoBlock.style.display === 'none' || seoBlock.style.display === '') ? 'block' : 'none';
+    }
   </script>
+  <script>
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+      link.addEventListener('click', e => {
+        if (!link.target || link.target === '_self') {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300); // 動畫時間要跟 CSS 裡的 transition 一樣
+        }
+      });
+    }
+  });
+</script>
 
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "活動當天可以彈性調整出場時間嗎？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "可以，我們會提前與主辦方確認流程，並可彈性配合現場需求，協調前後節目安排。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "氣球會不會很容易爆？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "我們使用專業品牌的高彈性氣球，搭配現場氣候與場地條件做出最佳選擇。除非極端天氣或不當碰觸，氣球基本上不易破損。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "氣球可以做什麼造型？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "我們提供超過 20 種熱門造型，包括卡通角色、愛心劍、小狗、小花、皇冠、蜂鳥等，並接受主題訂製。"
-        }
-      }
-    ]
-  }
-  </script>
 </body>
 </html>
