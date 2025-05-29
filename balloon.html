@@ -9,13 +9,10 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-  body.fade-out {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-</style>
-
-  <style>
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
     .posts {
       display: flex;
       flex-wrap: wrap;
@@ -42,6 +39,13 @@
       color: #aaa;
       line-height: 1.6em;
       margin-top: 1em;
+    }
+    .faq-item {
+      margin-bottom: 1.5em;
+    }
+    .faq-item h3 {
+      font-size: 1.1em;
+      margin-bottom: 0.3em;
     }
   </style>
 </head>
@@ -79,7 +83,6 @@
             👉 <a href="https://photos.app.goo.gl/UbhgkK45wfSU5xYT9" target="_blank">看更多氣球造型作品</a>
           </p>
 
-          <!-- SEO 摺疊區塊 -->
           <span class="seo-toggle" onclick="toggleSEO()">每個地方，都有氣球的歡樂身影</span>
           <div id="seo-keywords">
             <p>
@@ -103,13 +106,36 @@
           </div>
         </section>
 
+        <!-- FAQ 區塊 -->
+        <section id="faq">
+          <h2>常見問題 FAQ</h2>
+          <div class="faq-item">
+            <h3>問題一：填入你的問題</h3>
+            <p>這裡填入對應的回答。</p>
+          </div>
+          <div class="faq-item">
+            <h3>問題二：填入你的問題</h3>
+            <p>這裡填入對應的回答。</p>
+          </div>
+          <div class="faq-item">
+            <h3>問題三：填入你的問題</h3>
+            <p>這裡填入對應的回答。</p>
+          </div>
+          <div class="faq-item">
+            <h3>問題四：填入你的問題</h3>
+            <p>這裡填入對應的回答。</p>
+          </div>
+          <p style="margin-top: 1.5em;">
+            👉 <a href="faq.html">查看完整 FAQ</a>
+          </p>
+        </section>
+
       </div>
     </div>
 
     <!-- Sidebar -->
     <div id="sidebar">
       <div class="inner">
-
         <nav id="menu">
           <header class="major"><h2>選單</h2></header>
           <ul>
@@ -128,12 +154,11 @@
           </ul>
         </nav>
 
-        <!-- Contact -->
         <section>
           <header class="major"><h2>聯絡方式</h2></header>
           <ul class="contact">
             <li class="icon brands fa-line">
-              <span style="display: inline-block; margin-right: 10px;">LINE：</span>
+              <span style="margin-right: 10px;">LINE：</span>
               <a href="https://line.me/R/ti/p/@balloonsony" class="button small">加入我的 LINE</a>
             </li>
             <li class="icon solid fa-phone">電話：0930-733-100</li>
@@ -145,7 +170,6 @@
         <footer id="footer">
           <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
         </footer>
-
       </div>
     </div>
   </div>
@@ -163,21 +187,62 @@
     }
   </script>
   <script>
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
-      link.addEventListener('click', e => {
-        if (!link.target || link.target === '_self') {
-          e.preventDefault();
-          document.body.classList.add('fade-out');
-          setTimeout(() => {
-            window.location.href = href;
-          }, 300);
-        }
-      });
-    }
-  });
-</script>
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', e => {
+          if (!link.target || link.target === '_self') {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+              window.location.href = href;
+            }, 300);
+          }
+        });
+      }
+    });
+  </script>
 
+  <!-- FAQ 結構化資料 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "這裡填入問題一",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡填入回答一"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "這裡填入問題二",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡填入回答二"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "這裡填入問題三",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡填入回答三"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "這裡填入問題四",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡填入回答四"
+        }
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
