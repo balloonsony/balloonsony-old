@@ -9,13 +9,10 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-  body.fade-out {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-</style>
-
-  <style>
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
     .posts {
       display: flex;
       flex-wrap: wrap;
@@ -102,8 +99,38 @@
               💥 無論你想要浪漫驚喜，還是開幕的震撼場面，「氣球爆破演出」都是讓現場瞬間升級的秘密武器！
             </p>
           </div>
-        </section>
 
+          <!-- FAQ 區塊開始 -->
+          <section id="faq">
+            <h2>常見問題 FAQ</h2>
+
+            <div class="faq-item">
+              <h3>問題一：請填入你的問題</h3>
+              <p>這裡是對應的回答。</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>問題二：請填入你的問題</h3>
+              <p>這裡是對應的回答。</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>問題三：請填入你的問題</h3>
+              <p>這裡是對應的回答。</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>問題四：請填入你的問題</h3>
+              <p>這裡是對應的回答。</p>
+            </div>
+
+            <p style="margin-top: 1.5em;">
+              👉 <a href="faq.html">查看完整 FAQ</a>
+            </p>
+          </section>
+          <!-- FAQ 區塊結束 -->
+
+        </section>
       </div>
     </div>
 
@@ -163,23 +190,64 @@
       seoBlock.style.display = (seoBlock.style.display === 'none' || seoBlock.style.display === '') ? 'block' : 'none';
     }
   </script>
-
   <script>
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
-      link.addEventListener('click', e => {
-        if (!link.target || link.target === '_self') {
-          e.preventDefault();
-          document.body.classList.add('fade-out');
-          setTimeout(() => {
-            window.location.href = href;
-          }, 300);
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', e => {
+          if (!link.target || link.target === '_self') {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+              window.location.href = href;
+            }, 300);
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- FAQ 結構化資料 JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "問題一：請填入你的問題",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡是對應的回答。"
         }
-      });
-    }
-  });
-</script>
+      },
+      {
+        "@type": "Question",
+        "name": "問題二：請填入你的問題",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡是對應的回答。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "問題三：請填入你的問題",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡是對應的回答。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "問題四：請填入你的問題",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡是對應的回答。"
+        }
+      }
+    ]
+  }
+  </script>
 
 </body>
 </html>
