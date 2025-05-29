@@ -101,33 +101,71 @@
           </div>
 
           <!-- FAQ 區塊開始 -->
-          <section id="faq">
-            <h2>常見問題 FAQ</h2>
+<hr />
+<section id="faq">
+  <h2>常見問題 FAQ</h2>
+  <div class="faq-item">
+    <h3>問題一：請填入你的問題</h3>
+    <p>這裡是對應的回答。</p>
+  </div>
+  <div class="faq-item">
+    <h3>問題二：請填入你的問題</h3>
+    <p>這裡是對應的回答。</p>
+  </div>
+  <div class="faq-item">
+    <h3>問題三：請填入你的問題</h3>
+    <p>這裡是對應的回答。</p>
+  </div>
+  <div class="faq-item">
+    <h3>問題四：請填入你的問題</h3>
+    <p>這裡是對應的回答。</p>
+  </div>
+  <p style="margin-top: 1.5em;">
+    👉 <a href="faq.html">查看完整 FAQ</a>
+  </p>
+</section>
 
-            <div class="faq-item">
-              <h3>問題一：請填入你的問題</h3>
-              <p>這裡是對應的回答。</p>
-            </div>
-
-            <div class="faq-item">
-              <h3>問題二：請填入你的問題</h3>
-              <p>這裡是對應的回答。</p>
-            </div>
-
-            <div class="faq-item">
-              <h3>問題三：請填入你的問題</h3>
-              <p>這裡是對應的回答。</p>
-            </div>
-
-            <div class="faq-item">
-              <h3>問題四：請填入你的問題</h3>
-              <p>這裡是對應的回答。</p>
-            </div>
-
-            <p style="margin-top: 1.5em;">
-              👉 <a href="faq.html">查看完整 FAQ</a>
-            </p>
-          </section>
+<!-- JSON-LD 結構化資料，請放在 </body> 結尾前 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "請填入你的問題一",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "這裡填入回答一"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "請填入你的問題二",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "這裡填入回答二"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "請填入你的問題三",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "這裡填入回答三"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "請填入你的問題四",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "這裡填入回答四"
+      }
+    }
+  ]
+}
+</script>
           <!-- FAQ 區塊結束 -->
 
         </section>
