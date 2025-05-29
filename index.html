@@ -1,3 +1,4 @@
+<!-- 以下為修改後首頁 HTML，已加上 h2 結構 -->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -11,100 +12,50 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
   <style>
-    /* 轉場效果 */
-    body.fade-in {
-      opacity: 1;
-      transition: opacity 0.3s ease;
-    }
-
-    body.fade-out {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    /* 兩兩並排、卡片樣式 */
-    .features.flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2em;
-    }
-
+    body.fade-in { opacity: 1; transition: opacity 0.3s ease; }
+    body.fade-out { opacity: 0; transition: opacity 0.3s ease; }
+    .features.flex { display: flex; flex-wrap: wrap; gap: 2em; }
     .feature-card {
-      flex: 1 1 calc(50% - 2em);
-      background: none;
-      padding: 1.5em;
-      border-radius: 0.5em;
-      color: inherit;
-      text-decoration: none;
-      transition: transform 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 1.5em;
+      flex: 1 1 calc(50% - 2em); background: none; padding: 1.5em;
+      border-radius: 0.5em; color: inherit; text-decoration: none;
+      transition: transform 0.3s ease; display: flex; align-items: center; gap: 1.5em;
     }
-
-    .feature-card:hover {
-      transform: scale(1.05);
-    }
-
-    .feature-card .icon {
-      font-size: 2.5em;
-      flex-shrink: 0;
-    }
-
-    .feature-card .content h3 {
-      margin: 0 0 0.4em 0;
-      font-size: 1.3em;
-    }
-
-    .feature-card .content p {
-      margin: 0;
-      font-size: 0.95em;
-      line-height: 1.5;
-    }
-
+    .feature-card:hover { transform: scale(1.05); }
+    .feature-card .icon { font-size: 2.5em; flex-shrink: 0; }
+    .feature-card .content h3 { margin: 0 0 0.4em 0; font-size: 1.3em; }
+    .feature-card .content p { margin: 0; font-size: 0.95em; line-height: 1.5; }
     @media (max-width: 768px) {
-      .feature-card {
-        flex: 1 1 100%;
-        flex-direction: column;
-        text-align: center;
-      }
+      .feature-card { flex: 1 1 100%; flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body class="is-preload fade-in">
 
-<!-- Wrapper -->
 <div id="wrapper">
-
-  <!-- Main -->
   <div id="main">
     <div class="inner">
 
-      <!-- Header -->
       <header id="header">
         <h1 style="font-size: 4em; margin: 0;">氣球大叔 Sony</h1>
         <p>魔術、氣球、泡泡秀、會場佈置的專業表演者</p>
       </header>
 
-      <!-- Banner -->
+      <!-- Banner 區 -->
       <section id="banner" class="style1">
         <div class="content">
           <header>
-            <h1>歡迎來到氣球大叔的魔幻世界</h1>
+            <h2>關於我</h2>
             <p>專業演出 ✕ 滿滿驚喜 ✕ 繽紛歡樂</p>
           </header>
           <p>我是氣球大叔 Sony，一位結合魔術與藝術的表演者，擁有多年活動經驗，服務包含親子派對、商業活動、節慶活動與場佈。</p>
         </div>
-        <span class="image object">
-          <img src="images/pic01.jpg" alt="假圖" />
-        </span>
+        <span class="image object"><img src="images/pic01.jpg" alt="假圖" /></span>
       </section>
 
       <!-- 表演項目 -->
       <section id="services">
         <header class="major"><h2>表演項目</h2></header>
         <div class="features flex">
-
           <a href="magic.html" class="feature-card">
             <span class="icon solid fa-magic"></span>
             <div class="content">
@@ -112,7 +63,6 @@
               <p>結合魔術與氣球，搭配現場觀眾互動，帶來 30 分鐘滿滿笑聲！</p>
             </div>
           </a>
-
           <a href="balloon.html" class="feature-card">
             <span class="icon solid fa-star"></span>
             <div class="content">
@@ -120,7 +70,6 @@
               <p>演出後持續折氣球，讓觀眾也能開心帶回造型作品，氣氛超嗨！</p>
             </div>
           </a>
-
           <a href="bubble.html" class="feature-card">
             <span class="icon solid fa-bahai"></span>
             <div class="content">
@@ -128,7 +77,6 @@
               <p>結合泡泡魔法舞台＋進入泡泡拍照體驗，吸睛又夢幻！</p>
             </div>
           </a>
-
           <a href="decor.html" class="feature-card">
             <span class="icon solid fa-gift"></span>
             <div class="content">
@@ -136,7 +84,6 @@
               <p>拱門、打卡牆、合照區，從溫馨到大型活動全都搞定！</p>
             </div>
           </a>
-
         </div>
       </section>
 
@@ -157,7 +104,7 @@
         <ul class="contact">
           <li class="icon brands fa-line">
             <span style="display: inline-block; margin-right: 10px;">LINE：</span>
-            <a href="https://line.me/R/ti/p/@balloonsony" class="button small" style="display: inline-block; padding: 0.4em 1em;">加入我的 LINE</a>
+            <a href="https://line.me/R/ti/p/@balloonsony" class="button small">加入我的 LINE</a>
           </li>
           <li class="icon solid fa-phone">電話：0930-733-100</li>
           <li class="icon brands fa-instagram"><a href="https://instagram.com/balloonsony" target="_blank">@balloonsony</a></li>
@@ -168,7 +115,7 @@
     </div>
   </div>
 
-  <!-- Sidebar -->
+  <!-- 側邊選單 -->
   <div id="sidebar">
     <div class="inner">
       <nav id="menu">
@@ -185,38 +132,32 @@
             </ul>
           </li>
           <li><a href="#portfolio">作品集</a></li>
+<li><a href="faq.html">FAQ 常見問題</a></li>
           <li><a href="#contact">聯絡方式</a></li>
         </ul>
       </nav>
-
       <section>
         <header class="major"><h2>聯絡方式</h2></header>
         <ul class="contact">
-          <li class="icon brands fa-line">
-            <a href="https://line.me/R/ti/p/@balloonsony" class="button small">加入我的 LINE</a>
-          </li>
+          <li class="icon brands fa-line"><a href="https://line.me/R/ti/p/@balloonsony" class="button small">加入我的 LINE</a></li>
           <li class="icon solid fa-phone">0930-733-100</li>
           <li class="icon brands fa-instagram"><a href="#">@balloonsony</a></li>
           <li class="icon brands fa-facebook"><a href="#">粉絲團</a></li>
         </ul>
       </section>
-
       <footer id="footer">
         <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
       </footer>
     </div>
   </div>
-
 </div>
 
-<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 
-<!-- 頁面轉場效果 JS -->
 <script>
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
