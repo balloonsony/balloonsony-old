@@ -7,6 +7,14 @@
   <meta name="description" content="氣球大叔 Sony 專業提供造型氣球服務，快速製作各類可愛卡通角色、動物與愛心劍氣球，適合校慶、市集、百貨開幕與親子派對。" />
   <meta name="keywords" content="台北造型氣球, 新北氣球師, 桃園氣球表演, 校園氣球活動, 氣球教學, 商場現場氣球" />
   <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+  body.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+</style>
+
   <style>
     .posts {
       display: flex;
@@ -136,5 +144,22 @@
       seoBlock.style.display = (seoBlock.style.display === 'none' || seoBlock.style.display === '') ? 'block' : 'none';
     }
   </script>
+  <script>
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+      link.addEventListener('click', e => {
+        if (!link.target || link.target === '_self') {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300); // 動畫時間要跟 CSS 裡的 transition 一樣
+        }
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
