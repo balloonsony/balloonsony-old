@@ -9,13 +9,10 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-  body.fade-out {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-</style>
-
-  <style>
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
     .posts {
       display: flex;
       flex-wrap: wrap;
@@ -42,6 +39,13 @@
       color: #aaa;
       line-height: 1.6em;
       margin-top: 1em;
+    }
+    .faq-item {
+      margin-bottom: 1.5em;
+    }
+    .faq-item h3 {
+      font-size: 1.1em;
+      margin-bottom: 0.3em;
     }
   </style>
 </head>
@@ -80,28 +84,48 @@
             👉 <a href="https://photos.app.goo.gl/J9r64s9SD4RbMqkeA" target="_blank">看更多泡泡秀照片</a>
           </p>
 
-          <!-- 折疊區塊 -->
           <span class="seo-toggle" onclick="toggleSEO()">泡泡飛翔的地方，就是我們的舞台</span>
           <div id="seo-keywords">
             <p>
               🫧 <strong>泡泡秀表演｜全台北中地區服務</strong><br><br>
               大人小孩都愛的泡泡秀，從親子派對到大型戶外活動，我們都有專業設備與經驗豐富的泡泡表演團隊。<br>
               不論你在哪個縣市，想要打造如夢似幻的泡泡世界，我們都能提供服務！<br><br>
-
               ✅ <strong>服務地區：</strong><br>
               提供泡泡秀演出的地區包括：台北、新北、基隆、桃園、新竹、苗栗、台中、彰化、宜蘭等地區。<br>
               我們的泡泡表演適合戶外活動、校園慶典、親子館開幕、百貨節慶、幼兒園表演等各類場合。<br><br>
-
               ✅ <strong>熱門泡泡關鍵字：</strong><br>
               台北泡泡秀、台北泡泡表演、台北戶外泡泡、台北親子泡泡活動、<br>
               桃園泡泡秀、桃園生日泡泡表演、桃園泡泡藝術秀、<br>
               新竹泡泡秀、新竹學校泡泡演出、新竹大型泡泡、<br>
               台中泡泡表演、台中百貨泡泡活動、台中幼兒園泡泡演出、<br>
               ...以及其他城市泡泡相關的活動需求。<br><br>
-
               🎈 泡泡不是只能玩，更是一場視覺的奇蹟，我們讓每一次泡泡表演都留下美好的回憶！
             </p>
           </div>
+        </section>
+
+        <!-- FAQ 區塊 -->
+        <section id="faq">
+          <h2>常見問題 FAQ</h2>
+          <div class="faq-item">
+            <h3>問題一：填入你的問題</h3>
+            <p>這裡填入對應的回答。</p>
+          </div>
+          <div class="faq-item">
+            <h3>問題二：填入你的問題</h3>
+            <p>這裡填入對應的回答。</p>
+          </div>
+          <div class="faq-item">
+            <h3>問題三：填入你的問題</h3>
+            <p>這裡填入對應的回答。</p>
+          </div>
+          <div class="faq-item">
+            <h3>問題四：填入你的問題</h3>
+            <p>這裡填入對應的回答。</p>
+          </div>
+          <p style="margin-top: 1.5em;">
+            👉 <a href="faq.html">查看完整 FAQ</a>
+          </p>
         </section>
 
       </div>
@@ -110,7 +134,6 @@
     <!-- Sidebar -->
     <div id="sidebar">
       <div class="inner">
-
         <nav id="menu">
           <header class="major"><h2>選單</h2></header>
           <ul>
@@ -129,12 +152,11 @@
           </ul>
         </nav>
 
-        <!-- Contact -->
         <section>
           <header class="major"><h2>聯絡方式</h2></header>
           <ul class="contact">
             <li class="icon brands fa-line">
-              <span style="display: inline-block; margin-right: 10px;">LINE：</span>
+              <span style="margin-right: 10px;">LINE：</span>
               <a href="https://line.me/R/ti/p/@balloonsony" class="button small">加入我的 LINE</a>
             </li>
             <li class="icon solid fa-phone">電話：0930-733-100</li>
@@ -146,7 +168,6 @@
         <footer id="footer">
           <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
         </footer>
-
       </div>
     </div>
   </div>
@@ -164,21 +185,62 @@
     }
   </script>
   <script>
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
-      link.addEventListener('click', e => {
-        if (!link.target || link.target === '_self') {
-          e.preventDefault();
-          document.body.classList.add('fade-out');
-          setTimeout(() => {
-            window.location.href = href;
-          }, 300);
-        }
-      });
-    }
-  });
-</script>
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', e => {
+          if (!link.target || link.target === '_self') {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+              window.location.href = href;
+            }, 300);
+          }
+        });
+      }
+    });
+  </script>
 
+  <!-- FAQ 結構化資料 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "這裡填入問題一",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡填入回答一"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "這裡填入問題二",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡填入回答二"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "這裡填入問題三",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡填入回答三"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "這裡填入問題四",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "這裡填入回答四"
+        }
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
