@@ -8,6 +8,14 @@
   <meta name="keywords" content="台北魔術表演, 新北魔術秀, 桃園魔術表演者, 基隆魔術推薦, 新竹生日魔術, 魔術氣球互動, 商演魔術節目, 校園魔術表演" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  
+  <style>
+  body.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+</style>
+
   <style>
     .seo-toggle {
       display: block;
@@ -130,5 +138,21 @@
       seoBlock.style.display = (seoBlock.style.display === 'none' || seoBlock.style.display === '') ? 'block' : 'none';
     }
   </script>
+  <script>
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+      link.addEventListener('click', e => {
+        if (!link.target || link.target === '_self') {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300); // 動畫時間要跟 CSS 裡的 transition 一樣
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>
