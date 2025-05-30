@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
+    
     body.fade-out {
       opacity: 0;
       transition: opacity 0.3s ease;
@@ -26,6 +27,19 @@
       margin-bottom: 0.5em;
       color: #444;
     }
+ #wrapper {
+      display: flex;
+    }
+    #sidebar {
+      width: 20em;
+      flex-shrink: 0;
+    }
+    #main {
+      flex-grow: 1;
+      padding: 2em;
+    }
+  </style>
+</head>
   </style>
 </head>
 <body class="is-preload">
