@@ -23,11 +23,12 @@
       transition: background-color 0.2s ease;
       margin-bottom: 0.5em;
       border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
 
     .accordion:hover,
     .accordion.active {
-      background-color: #e2e2e2;
+      background-color: #eee;
     }
 
     .panel {
@@ -35,9 +36,6 @@
       background-color: white;
       display: none;
       overflow: hidden;
-      border-left: 2px solid #ccc;
-      border-right: 2px solid #ccc;
-      border-bottom: 2px solid #ccc;
       border-radius: 0 0 5px 5px;
       margin-bottom: 1em;
     }
@@ -52,11 +50,13 @@
     <div id="main">
       <div class="inner">
 
+        <!-- Header -->
         <header id="header">
           <h1>常見問題 FAQ</h1>
           <p>這裡整理了氣球大叔 Sony 最常被問到的問題與解答</p>
         </header>
 
+        <!-- FAQ 區塊 -->
         <section id="faq">
           <button class="accordion">Q1：氣球表演有哪些內容？</button>
           <div class="panel">
@@ -145,7 +145,7 @@
       }
     });
 
-    // Accordion functionality
+    // Accordion
     const accordions = document.querySelectorAll(".accordion");
     accordions.forEach((accordion) => {
       accordion.addEventListener("click", function () {
