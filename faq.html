@@ -14,6 +14,32 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    #wrapper {
+      display: flex;
+    }
+    #sidebar {
+      width: 18em;
+      flex-shrink: 0;
+    }
+    #main {
+      flex-grow: 1;
+      padding: 2em;
+    }
+    #main > .inner {
+      max-width: 100%;
+    }
+    .faq-item {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2em;
+    }
+  </style>
 </head>
 <body class="is-preload">
   <div id="wrapper">
@@ -59,12 +85,13 @@
     <!-- 主要內容 -->
     <div id="main">
       <div class="inner">
+
         <header id="header">
           <h1>常見問題 FAQ</h1>
           <p>這裡整理了氣球大叔 Sony 最常被問到的問題與解答</p>
         </header>
-
-     <!-- FAQ 區塊 -->
+ 
+<!-- FAQ 區塊 -->
     <section aria-labelledby="faq-magic">
       <h2 id="faq-magic">🔮 魔術相關 FAQ</h2>
       <!-- Q1～Q5 -->
@@ -112,9 +139,9 @@
       <div class="faq-item"><details><summary>Q26：可以安排「全天待命」或「活動全包」的服務嗎？</summary><p>A26：可以！我們可安排專人全天待命，協助活動每個流程段落順利執行，尤其適合百貨與校園大型活動。</p></details></div>
     </section>
 
-      </div>
-    </div>
-  </div>
+      </div> <!-- inner 結束 -->
+    </div> <!-- main 結束 -->
+  </div> <!-- wrapper 結束 -->
 
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
@@ -122,5 +149,23 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', e => {
+          if (!link.target || link.target === '_self') {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+              window.location.href = href;
+            }, 300);
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
+
