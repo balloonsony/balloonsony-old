@@ -1,19 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="zh-Hant">
 <head>
-  <!-- Favicon 設定 -->
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-
-  <title>常見問題 FAQ｜氣球大叔 Sony</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>常見問題 FAQ｜氣球大叔 Sony</title>
   <meta name="robots" content="index, follow" />
   <meta name="description" content="氣球大叔 Sony 的常見問題頁面，幫助您快速了解表演項目、活動預約、價格資訊等內容。" />
   <meta name="keywords" content="氣球大叔, 常見問題, FAQ, 表演流程, 預約流程, 表演內容說明" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
@@ -32,10 +30,10 @@
 </head>
 <body class="is-preload">
   <div id="wrapper">
-  <!-- 側邊選單 -->
+
+    <!-- ✅ 先放 sidebar，才能顯示在左邊 -->
     <div id="sidebar">
       <div class="inner">
-
         <nav id="menu">
           <header class="major"><h2>選單</h2></header>
           <ul>
@@ -54,7 +52,6 @@
             <li><a href="index.html#contact">聯絡方式</a></li>
           </ul>
         </nav>
-
         <section>
           <header class="major"><h2>聯絡方式</h2></header>
           <ul class="contact">
@@ -64,21 +61,54 @@
             <li class="icon brands fa-facebook"><a href="https://www.facebook.com/BalloonSony/" target="_blank">粉絲團</a></li>
           </ul>
         </section>
-
         <footer id="footer">
           <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
         </footer>
       </div>
     </div>
-    <!-- 主內容 -->
+
+    <!-- ✅ 再放 main，這樣選單才會在左邊 -->
     <div id="main">
       <div class="inner">
 
-        <!-- 標頭 -->
+        <!-- 標頭區 -->
         <header id="header">
           <h1>常見問題 FAQ</h1>
           <p>這裡整理了氣球大叔 Sony 最常被問到的問題與解答</p>
         </header>
+
+        <!-- FAQ 區域，請你保留既有的 FAQ 區塊 -->
+        <!-- 建議：原本的 section 可以全部複製貼上進來就好，這裡我就不再重複啦 -->
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', e => {
+          if (!link.target || link.target === '_self') {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+              window.location.href = href;
+            }, 300);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
 
      <!-- FAQ 區塊 -->
 <section aria-labelledby="faq-magic">
