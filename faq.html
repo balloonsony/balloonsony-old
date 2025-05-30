@@ -31,7 +31,7 @@
 <body class="is-preload">
   <div id="wrapper">
 
-    <!-- ✅ 先放 sidebar，才能顯示在左邊 -->
+    <!-- 側邊欄 -->
     <div id="sidebar">
       <div class="inner">
         <nav id="menu">
@@ -67,48 +67,15 @@
       </div>
     </div>
 
-    <!-- ✅ 再放 main，這樣選單才會在左邊 -->
+    <!-- 主要內容 -->
     <div id="main">
       <div class="inner">
 
-        <!-- 標頭區 -->
         <header id="header">
           <h1>常見問題 FAQ</h1>
           <p>這裡整理了氣球大叔 Sony 最常被問到的問題與解答</p>
         </header>
 
-        <!-- FAQ 區域，請你保留既有的 FAQ 區塊 -->
-        <!-- 建議：原本的 section 可以全部複製貼上進來就好，這裡我就不再重複啦 -->
-
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script>
-    document.querySelectorAll('a[href]').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
-        link.addEventListener('click', e => {
-          if (!link.target || link.target === '_self') {
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-              window.location.href = href;
-            }, 300);
-          }
-        });
-      }
-    });
-  </script>
-</body>
-</html>
 
      <!-- FAQ 區塊 -->
 <section aria-labelledby="faq-magic">
