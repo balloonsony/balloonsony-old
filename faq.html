@@ -1,41 +1,56 @@
 <!DOCTYPE HTML>
 <html lang="zh-Hant">
 <head>
-  <!-- Favicon 設定 -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-
-  <title>常見問題 FAQ｜氣球大叔 Sony</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>常見問題 FAQ｜氣球大叔 Sony</title>
   <meta name="robots" content="index, follow" />
-  <meta name="description" content="氣球大叔 Sony 常見問題 FAQ，解答魔術、氣球、活動安排與付款相關疑問。" />
-  <meta name="keywords" content="氣球大叔 FAQ, 魔術問題, 表演疑問, 活動預約, 付款說明" />
+  <meta name="description" content="氣球大叔 Sony 最常被問到的問題彙整，包含魔術、氣球、泡泡秀、會場佈置與付款相關常見問題 FAQ。" />
+  <meta name="keywords" content="氣球大叔 FAQ, 魔術問題, 氣球表演疑問, 泡泡秀常見問題, 預約付款問題" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <style>
     body.fade-out {
       opacity: 0;
       transition: opacity 0.3s ease;
     }
+
+    /* 🛠 關鍵修正 CSS */
+    #wrapper {
+      display: flex;
+    }
+
+    #sidebar {
+      width: 18em;
+      flex-shrink: 0;
+      background: #f5f5f5;
+    }
+
+    #main {
+      flex-grow: 1;
+      padding: 2em;
+    }
+
     .faq-item {
       margin-bottom: 1.5em;
     }
+
     .faq-item details summary {
       font-weight: bold;
       cursor: pointer;
+      font-size: 1.05em;
     }
+
     .faq-item p {
       margin-top: 0.5em;
     }
   </style>
 </head>
+
 <body class="is-preload">
   <div id="wrapper">
-
     <!-- 側邊欄 -->
     <div id="sidebar">
       <div class="inner">
@@ -57,7 +72,6 @@
             <li><a href="index.html#contact">聯絡方式</a></li>
           </ul>
         </nav>
-
         <section>
           <header class="major"><h2>聯絡方式</h2></header>
           <ul class="contact">
@@ -67,31 +81,25 @@
             <li class="icon brands fa-facebook"><a href="https://www.facebook.com/BalloonSony/" target="_blank">粉絲團</a></li>
           </ul>
         </section>
-
-        <footer id="footer">
-          <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
-        </footer>
       </div>
     </div>
 
-    <!-- 主要內容 -->
+    <!-- 主內容 -->
     <div id="main">
       <div class="inner">
         <header id="header">
           <h1>常見問題 FAQ</h1>
-          <p>這裡整理了氣球大叔 SONY 最常被問到的問題與解答</p>
+          <p>這裡整理了氣球大叔 Sony 最常被問到的問題與解答</p>
         </header>
 
         <!-- FAQ 區塊 -->
         <section>
-          <p>以下分類為：魔術、氣球、泡泡秀、佈置與預約付款常見問題。點擊問題可展開答案。</p>
-
-          <div class="faq-item"><details><summary>Q1：你們會帶音響設備嗎？</summary><p>A1：會的，我們提供基本音響，適合中小型場地使用。</p></details></div>
-          <div class="faq-item"><details><summary>Q2：現場會有互動嗎？</summary><p>A2：有！每場表演皆有設計觀眾互動橋段，增加現場參與感。</p></details></div>
-          <div class="faq-item"><details><summary>Q3：氣球表演需要多少時間？</summary><p>A3：約 30～60 分鐘可彈性調整，依活動需求安排。</p></details></div>
-          <div class="faq-item"><details><summary>Q4：表演完會留下垃圾嗎？</summary><p>A4：我們會自備收拾道具，保持場地整潔。</p></details></div>
-          <div class="faq-item"><details><summary>Q5：如果活動延期怎麼辦？</summary><p>A5：可免費改期一次，需提前聯絡確認。</p></details></div>
-          <div class="faq-item"><details><summary>Q6：能開收據或報帳單嗎？</summary><p>A6：沒問題，我們可提供完整報帳資料或電子收據。</p></details></div>
+          <div class="faq-item"><details><summary>Q1：氣球秀會不會很吵？適合室內嗎？</summary><p>A1：我們的氣球互動表演不會使用擴音器，適合學校、圖書館、活動中心等室內場所。</p></details></div>
+          <div class="faq-item"><details><summary>Q2：氣球可以維持多久？</summary><p>A2：通常可維持 3～5 天以上，避免陽光直曬與高溫可延長壽命。</p></details></div>
+          <div class="faq-item"><details><summary>Q3：活動當天若下雨怎麼辦？</summary><p>A3：我們會準備帳棚與防水備案，若需改期可提前協調。</p></details></div>
+          <div class="faq-item"><details><summary>Q4：你們有服務外縣市嗎？</summary><p>A4：有的，北中南皆可安排，視交通與住宿需求另計。</p></details></div>
+          <div class="faq-item"><details><summary>Q5：活動現場需要提供什麼？</summary><p>A5：只需要桌子與電源，我們其他自備。</p></details></div>
+          <div class="faq-item"><details><summary>Q6：可以搭配多種表演嗎？</summary><p>A6：當然可以！我們可搭配魔術、泡泡秀與造型氣球一次安排。</p></details></div>
         </section>
       </div>
     </div>
@@ -104,7 +112,7 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- FAQ JSON-LD 結構化資料 -->
+  <!-- 結構化資料 JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -112,50 +120,50 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "你們會帶音響設備嗎？",
+        "name": "氣球秀會不會很吵？適合室內嗎？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "會的，我們提供基本音響，適合中小型場地使用。"
+          "text": "我們的氣球互動表演不會使用擴音器，適合學校、圖書館、活動中心等室內場所。"
         }
       },
       {
         "@type": "Question",
-        "name": "現場會有互動嗎？",
+        "name": "氣球可以維持多久？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "有！每場表演皆有設計觀眾互動橋段，增加現場參與感。"
+          "text": "通常可維持 3～5 天以上，避免陽光直曬與高溫可延長壽命。"
         }
       },
       {
         "@type": "Question",
-        "name": "氣球表演需要多少時間？",
+        "name": "活動當天若下雨怎麼辦？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "約 30～60 分鐘可彈性調整，依活動需求安排。"
+          "text": "我們會準備帳棚與防水備案，若需改期可提前協調。"
         }
       },
       {
         "@type": "Question",
-        "name": "表演完會留下垃圾嗎？",
+        "name": "你們有服務外縣市嗎？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "我們會自備收拾道具，保持場地整潔。"
+          "text": "有的，北中南皆可安排，視交通與住宿需求另計。"
         }
       },
       {
         "@type": "Question",
-        "name": "如果活動延期怎麼辦？",
+        "name": "活動現場需要提供什麼？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "可免費改期一次，需提前聯絡確認。"
+          "text": "只需要桌子與電源，我們其他自備。"
         }
       },
       {
         "@type": "Question",
-        "name": "能開收據或報帳單嗎？",
+        "name": "可以搭配多種表演嗎？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "沒問題，我們可提供完整報帳資料或電子收據。"
+          "text": "當然可以！我們可搭配魔術、泡泡秀與造型氣球一次安排。"
         }
       }
     ]
