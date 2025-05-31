@@ -33,22 +33,55 @@
       line-height: 1.6em;
       margin-top: 1em;
     }
-    .posts {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5em;
-    }
+   <style>
+  body.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .seo-toggle {
+    display: block;
+    margin-top: 2em;
+    font-size: 0.8em;
+    cursor: pointer;
+    color: #999;
+    text-decoration: underline;
+  }
+
+  #seo-keywords {
+    display: none;
+    font-size: 0.75em;
+    color: #aaa;
+    line-height: 1.6em;
+    margin-top: 1em;
+  }
+
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .posts img {
+    width: calc(50% - 8px);
+    max-width: none;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
     .posts img {
       width: 100%;
-      max-width: 400px;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 8px;
     }
-    .more-link {
-      margin-top: 1em;
-    }
-  </style>
+  }
+
+  .more-link {
+    margin-top: 1em;
+  }
+</style>
+
 </head>
 <body class="is-preload">
   <div id="wrapper">
