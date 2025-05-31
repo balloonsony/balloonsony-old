@@ -70,21 +70,65 @@
       </header>
 
   <!-- Banner -->
+<style>
+  /* 新增響應式排版樣式 */
+  #banner .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  #banner .text-block {
+    flex: 1;
+  }
+
+  #banner .image-block {
+    flex: 1;
+    text-align: right;
+  }
+
+  #banner .image-block img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 手機版排版調整 */
+  @media (max-width: 768px) {
+    #banner .content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #banner .image-block,
+    #banner .text-block {
+      text-align: center;
+    }
+  }
+</style>
+
 <section id="banner" class="style1">
   <div class="content">
-     <img src="images/index5.jpg" alt="氣球大叔 Sony 表演照片" style="width:100%; max-width:600px;" />
-    <header>
-      <h2>關於我</h2>
-    </header>
-    <p>
-      🎈 歡樂，是可以被設計出來的。<br>
-      我是氣球大叔 Sony，用氣球編織驚喜、用魔術點燃氛圍、用泡泡創造奇蹟。<br>
-      從生日派對到企業活動，從百貨開幕到婚禮爆破，我打造的不只是活動現場，而是一種讓人嘴角上揚的「現場魔法」。<br><br>
+    <div class="text-block">
+      <header>
+        <h2>關於我</h2>
+      </header>
+      <p>
+        🎈 歡樂，是可以被設計出來的。<br>
+        我是氣球大叔 Sony，用氣球編織驚喜、用魔術點燃氛圍、用泡泡創造奇蹟。<br>
+        從生日派對到企業活動，從百貨開幕到婚禮爆破，我打造的不只是活動現場，而是一種讓人嘴角上揚的「現場魔法」。<br><br>
 
-      我的演出服務涵蓋：<strong>氣球秀、泡泡秀、魔術表演、會場佈置、婚禮爆破、天爆球、地爆球</strong> 等精彩項目。<br>
-      活動範圍以 <strong>台北、新北、桃園、新竹、台中</strong> 為主，<em>其他地區歡迎洽詢，彈性安排、誠意配合</em>。<br>
-      無論是 <em>親子派對、學校演出、商演、開幕活動、百貨節慶</em>，我都用表演讓場子活起來。
-    </p>
+        我的演出服務涵蓋：<strong>氣球秀、泡泡秀、魔術表演、會場佈置、婚禮爆破、天爆球、地爆球</strong> 等精彩項目。<br>
+        活動範圍以 <strong>台北、新北、桃園、新竹、台中</strong> 為主，<em>其他地區歡迎洽詢，彈性安排、誠意配合</em>。<br>
+        無論是 <em>親子派對、學校演出、商演、開幕活動、百貨節慶</em>，我都用表演讓場子活起來。
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="images/index5.jpg" alt="氣球大叔 Sony 表演照片" />
+    </div>
   </div>
 </section>
 
