@@ -201,6 +201,25 @@
     transform: scale(1.05);
   }
 </style>
+</div> <!-- 結束作品圖片區 -->
+<style>
+  .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .portfolio-grid article {
+    flex: 1 1 calc(25% - 1rem); /* 每列4張 */
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-grid article {
+      flex: 1 1 calc(50% - 1rem); /* 手機版每列2張 */
+    }
+  }
+</style>
+</section> <!-- 這是原本作品集 section 的結尾 -->
 
       </section>
 
