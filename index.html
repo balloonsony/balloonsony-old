@@ -103,18 +103,23 @@
     margin: 0 auto;
   }
 
-  /* 手機版排版調整 */
-  @media (max-width: 768px) {
-    #banner .content {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    #banner .image-block,
-    #banner .text-block {
-      text-align: center;
-    }
+ @media (max-width: 768px) {
+  #banner .content {
+    flex-direction: column;
+    text-align: center;
   }
+
+  #banner .image-block {
+    order: 1;
+    text-align: center;
+  }
+
+  #banner .text-block {
+    order: 2;
+    text-align: left; /* 關鍵：讓文字本身靠左對齊 */
+  }
+}
+
 </style>
 
 <section id="banner" class="style1">
