@@ -284,7 +284,9 @@
       });
     }
   });
-
+window.addEventListener('pageshow', function(event) {
+    document.body.classList.add('fade-in');
+  });
 </script>
 
 </body>
