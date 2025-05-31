@@ -19,7 +19,7 @@
 <style>
   .posts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* ⭐ 固定兩欄排版 */
     gap: 16px;
     justify-items: center;
   }
@@ -35,12 +35,12 @@
   }
 
   .posts img:hover {
-    transform: scale(1.03); /* 可選：滑過微放大 */
+    transform: scale(1.03);
   }
 
   @media (max-width: 768px) {
     .posts {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* ⭐ 手機變成一欄 */
     }
 
     .posts img {
@@ -53,6 +53,7 @@
     margin-top: 1em;
   }
 </style>
+
 
 
 </head>
