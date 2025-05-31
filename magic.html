@@ -16,43 +16,49 @@
   <meta name="robots" content="index, follow" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-<style>
-  .posts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* ⭐ 固定兩欄排版 */
-    gap: 16px;
-    justify-items: center;
-  }
-
-  .posts img {
-    width: 100%;
-    max-width: 400px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-  }
-
-  .posts img:hover {
-    transform: scale(1.03);
-  }
-
-  @media (max-width: 768px) {
+ <style>
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
     .posts {
-      grid-template-columns: 1fr; /* ⭐ 手機變成一欄 */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
     }
-
     .posts img {
-      height: auto;
-      max-width: 100%;
+      width: 100%;
+      max-width: 500px;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 8px;
     }
-  }
-
-  .more-link {
-    margin-top: 1em;
-  }
-</style>
+    .seo-toggle {
+      display: block;
+      margin-top: 2em;
+      font-size: 0.8em;
+      cursor: pointer;
+      color: #999;
+      text-decoration: underline;
+    }
+    #seo-keywords {
+      display: none;
+      font-size: 0.8em;
+      color: #aaa;
+      line-height: 1.6em;
+      margin-top: 1em;
+    }
+    .faq-item {
+      margin-bottom: 1.5em;
+    }
+    .faq-item h3 {
+      font-size: 1.1em;
+      margin-bottom: 0.3em;
+    }
+    .more-link {
+      margin-top: 1em;
+    }
+  </style>
 
 
 
