@@ -69,9 +69,9 @@
         <p>魔術、氣球、泡泡秀、會場佈置的專業表演者</p>
       </header>
 
-  <!-- Banner -->
+<!-- Banner -->
 <style>
-  /* 新增響應式排版樣式 */
+  /* Banner 容器：桌機版為左右排列 */
   #banner .content {
     display: flex;
     flex-direction: row;
@@ -79,22 +79,29 @@
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap;
+    max-width: 100%;
+    padding: 2rem 1rem;
   }
 
+  /* 文字區塊 */
   #banner .text-block {
     flex: 1;
   }
 
+  /* 圖片區塊 */
   #banner .image-block {
     flex: 1;
     text-align: right;
   }
 
+  /* 圖片樣式：放大為 800px 且響應式 */
   #banner .image-block img {
-  max-width: 700px;
-  width: 100%;
-  height: auto;
-}
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
   /* 手機版排版調整 */
   @media (max-width: 768px) {
@@ -132,6 +139,7 @@
     </div>
   </div>
 </section>
+
 
       <!-- 表演項目 -->
       <section id="services">
