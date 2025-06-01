@@ -210,7 +210,6 @@
       link.addEventListener('click', e => {
         e.preventDefault();
 
-        // 防止重複點擊干擾動畫與歷史
         if (document.body.classList.contains('is-transitioning')) return;
         document.body.classList.add('is-transitioning');
 
@@ -218,26 +217,22 @@
         document.body.classList.remove('fade-in');
         document.body.classList.add('fade-out');
 
-        // 使用 assign，讓上一頁能正確返回
+        // 延遲跳轉，保證動畫執行
         setTimeout(() => {
-          window.location.assign(href);
+          window.location.href = href; // 用 href 而非 assign，手機返回會比較穩定
         }, 300);
       });
     }
   });
 
-  // 回上一頁時觸發淡入，避免白畫面
+  // 解決手機返回上一頁卡畫面或閃爍問題
   window.addEventListener('pageshow', function(event) {
-    if (
-      event.persisted ||
-      (performance.getEntriesByType("navigation")[0]?.type === "back_forward")
-    ) {
-      document.body.classList.remove('fade-out');
-      document.body.classList.add('fade-in');
-      document.body.classList.remove('is-transitioning');
-    }
+    document.body.classList.remove('fade-out');
+    document.body.classList.add('fade-in');
+    document.body.classList.remove('is-transitioning');
   });
 </script>
+
 
 
   <!-- FAQ 結構化資料 JSON-LD -->
