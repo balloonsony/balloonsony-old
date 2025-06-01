@@ -55,6 +55,21 @@
     @media (max-width: 768px) {
       .feature-card { flex: 1 1 100%; flex-direction: column; text-align: center; }
     }
+      /* 👇 新增這段！讓 sidebar 固定在電腦版 */
+    @media (min-width: 981px) {
+      #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 1000;
+      }
+
+      #wrapper {
+        margin-left: 22em;
+      }
+    }
   </style>
 </head>
 <body class="is-preload">
@@ -241,15 +256,7 @@
           <li><a href="#contact">聯絡方式</a></li>
         </ul>
       </nav>
-         <section>
-      <header class="major"><h2>聯絡方式</h2></header>
-      <ul class="contact">
-        <li class="icon brands fa-line">LINE ID：<strong>sony0613</strong></li>
-        <li class="icon solid fa-phone"><a href="tel:0930733100">電話：0930-733-100</a></li>
-        <li class="icon brands fa-instagram"><a href="https://www.instagram.com/balloonsony/" target="_blank" rel="noopener noreferrer">@balloonsony</a></li>
-        <li class="icon brands fa-facebook"><a href="https://www.facebook.com/BalloonSony/" target="_blank" rel="noopener noreferrer">粉絲團</a></li>
-      </ul>
-    </section>
+       
   </div>
 </div>
     </div>
