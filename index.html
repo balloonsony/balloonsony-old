@@ -264,12 +264,6 @@
   <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
 </footer>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
 <script>
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
@@ -278,7 +272,7 @@
         if (!link.target || link.target === '_self') {
           e.preventDefault();
 
-          // ✅ 新增這段：清除網址上的 # 錨點
+          // ✅ 清除網址上的 hash，避免回上一頁還停在錨點
           if (window.location.hash) {
             history.replaceState(null, null, window.location.pathname);
           }
@@ -286,18 +280,29 @@
           document.body.classList.remove('fade-in');
           document.body.classList.add('fade-out');
 
-          // ✅ 關鍵：用 assign() 保留正確歷史紀錄（這樣上一頁才會回首頁）
+          // ✅ 關鍵：用 assign() 替代 href
           setTimeout(() => {
-            window.location.assign(href); // ← 這行是唯一替換的地方
+            window.location.assign(href);
           }, 300);
         }
       });
     }
   });
 
+  // ✅ 解決手機返回頁面後可能「透明」或「卡住」的問題
   window.addEventListener('pageshow', function(event) {
-    document.body.classList.remove('fade-out'); // ← 關鍵補強：移除殘留的透明效果
-    document.body.classList.add('fade-in');     // ← 套用淡入動畫，恢復顯示
+    document.body.classList.remove('fade-out');
+    document.body.classList.add('fade-in');
+
+    // ✅ 補強：如果 URL 有 hash，強制滾動到它（避免定位錯誤）
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
   });
 </script>
 
