@@ -265,14 +265,23 @@
 </footer>
 
 <script>
+  // 只綁定「真的跳頁」的連結，不干擾 # 或 menu 用途
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
-    if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+
+    // ✅ 僅處理那些是跳外頁的連結
+    const isPageLink = href &&
+      !href.startsWith('#') &&
+      !href.startsWith('mailto:') &&
+      !href.startsWith('javascript:') &&
+      !link.closest('#sidebar'); // ❗不要綁到側邊欄的連結
+
+    if (isPageLink) {
       link.addEventListener('click', e => {
         if (!link.target || link.target === '_self') {
           e.preventDefault();
 
-          // ✅ 清除網址上的 hash，避免回上一頁還停在錨點
+          // 清除 hash
           if (window.location.hash) {
             history.replaceState(null, null, window.location.pathname);
           }
@@ -280,7 +289,6 @@
           document.body.classList.remove('fade-in');
           document.body.classList.add('fade-out');
 
-          // ✅ 關鍵：用 assign() 替代 href
           setTimeout(() => {
             window.location.assign(href);
           }, 300);
@@ -289,12 +297,11 @@
     }
   });
 
-  // ✅ 解決手機返回頁面後可能「透明」或「卡住」的問題
   window.addEventListener('pageshow', function(event) {
     document.body.classList.remove('fade-out');
     document.body.classList.add('fade-in');
 
-    // ✅ 補強：如果 URL 有 hash，強制滾動到它（避免定位錯誤）
+    // 強制 hash 對齊
     if (window.location.hash) {
       const target = document.querySelector(window.location.hash);
       if (target) {
