@@ -240,7 +240,7 @@
             </ul>
           </li>
           <li><a href="#portfolio">作品集</a></li>
-          <li><a href="go-faq.html">FAQ 常見問題</a></li>
+          <li><a href="faq.html">FAQ 常見問題</a></li>
           <li><a href="#contact">聯絡方式</a></li>
         </ul>
       </nav>
@@ -265,11 +265,11 @@
 </footer>
 
 <script>
-  // 只處理 main 區域裡的 .html 連結
+  // 僅針對 <div id="main"> 區域裡的 .html 連結執行淡出動畫與跳轉
   document.querySelectorAll('#main a[href]').forEach(link => {
     const href = link.getAttribute('href');
 
-    // 僅針對 .html 的頁面連結，不處理錨點、mail、js
+    // 僅針對 .html 結尾的連結
     if (
       href &&
       href.endsWith('.html') &&
@@ -280,7 +280,7 @@
         if (!link.target || link.target === '_self') {
           e.preventDefault();
 
-          // 清除 hash
+          // 清除錨點（避免上一頁卡在特定區塊）
           if (window.location.hash) {
             history.replaceState(null, null, window.location.pathname);
           }
@@ -296,6 +296,7 @@
     }
   });
 
+  // 頁面從 cache 回來時重新觸發淡入與滾動定位
   window.addEventListener('pageshow', function(event) {
     document.body.classList.remove('fade-out');
     document.body.classList.add('fade-in');
@@ -310,6 +311,7 @@
     }
   });
 </script>
+
 
 
 
