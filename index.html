@@ -277,23 +277,30 @@
       link.addEventListener('click', e => {
         if (!link.target || link.target === '_self') {
           e.preventDefault();
-                    // ✅ 新增這段：清除網址上的 # 錨點
+
+          // ✅ 新增這段：清除網址上的 # 錨點
           if (window.location.hash) {
             history.replaceState(null, null, window.location.pathname);
           }
+
           document.body.classList.remove('fade-in');
           document.body.classList.add('fade-out');
-          setTimeout(() => { window.location.href = href; }, 300);
+
+          // ✅ 關鍵：用 assign() 保留正確歷史紀錄（這樣上一頁才會回首頁）
+          setTimeout(() => {
+            window.location.assign(href); // ← 這行是唯一替換的地方
+          }, 300);
         }
       });
     }
   });
-window.addEventListener('pageshow', function(event) {
-  document.body.classList.remove('fade-out'); // ← 關鍵補強：移除殘留的透明效果
-  document.body.classList.add('fade-in');     // ← 套用淡入動畫，恢復顯示
-});
 
+  window.addEventListener('pageshow', function(event) {
+    document.body.classList.remove('fade-out'); // ← 關鍵補強：移除殘留的透明效果
+    document.body.classList.add('fade-in');     // ← 套用淡入動畫，恢復顯示
+  });
 </script>
+
 
 </body>
 </html>
