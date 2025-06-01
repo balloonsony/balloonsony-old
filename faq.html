@@ -161,6 +161,32 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 
+<script>
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+      link.addEventListener('click', e => {
+        if (!link.target || link.target === '_self') {
+          e.preventDefault();
+          document.body.classList.remove('fade-in');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.assign(href); // ✅ 替代 href，保留歷史紀錄
+          }, 300);
+        }
+      });
+    }
+  });
+
+  // ✅ 修正返回白畫面
+  window.addEventListener('pageshow', function(event) {
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+      document.body.classList.remove('fade-out');
+      document.body.classList.add('fade-in');
+    }
+  });
+</script>
+
   <script>
     document.querySelectorAll('a[href]').forEach(link => {
       const href = link.getAttribute('href');
