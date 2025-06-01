@@ -186,38 +186,6 @@
     }
   });
 </script>
-
-  <script>
-    document.querySelectorAll('a[href]').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
-        link.addEventListener('click', e => {
-          if (!link.target || link.target === '_self') {
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-              window.location.href = href;
-            }, 300);
-          }
-        });
-      }
-    });
-
-    // Accordion
-    const accordions = document.querySelectorAll(".accordion");
-    accordions.forEach((accordion) => {
-      accordion.addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    });
-  </script>
-
  <!-- 結構化資料 FAQ JSON-LD -->
 <script type="application/ld+json">
 {
