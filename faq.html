@@ -171,7 +171,12 @@
           document.body.classList.remove('fade-in');
           document.body.classList.add('fade-out');
           setTimeout(() => {
-            window.location.assign(href); // ✅ 替代 href，保留歷史紀錄
+            // ✅ 判斷是不是從 FAQ 來的
+            if (document.referrer.includes('faq.html')) {
+              window.location.href = href; // 可正常返回上一頁
+            } else {
+              window.location.replace(href); // 不留下歷史記錄
+            }
           }, 300);
         }
       });
@@ -186,6 +191,7 @@
     }
   });
 </script>
+
  <!-- 結構化資料 FAQ JSON-LD -->
 <script type="application/ld+json">
 {
