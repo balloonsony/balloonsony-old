@@ -217,21 +217,24 @@
         document.body.classList.remove('fade-in');
         document.body.classList.add('fade-out');
 
-        // 延遲跳轉，保證動畫執行
-        setTimeout(() => {
-          window.location.href = href; // 用 href 而非 assign，手機返回會比較穩定
-        }, 300);
+        // 使用 requestAnimationFrame 確保動畫渲染完成後才跳轉
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300);
+        });
       });
     }
   });
 
-  // 解決手機返回上一頁卡畫面或閃爍問題
+  // 回上一頁時強制觸發淡入
   window.addEventListener('pageshow', function(event) {
     document.body.classList.remove('fade-out');
     document.body.classList.add('fade-in');
     document.body.classList.remove('is-transitioning');
   });
 </script>
+
 
 
 
