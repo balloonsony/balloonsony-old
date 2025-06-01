@@ -277,6 +277,10 @@
       link.addEventListener('click', e => {
         if (!link.target || link.target === '_self') {
           e.preventDefault();
+                    // ✅ 新增這段：清除網址上的 # 錨點
+          if (window.location.hash) {
+            history.replaceState(null, null, window.location.pathname);
+          }
           document.body.classList.remove('fade-in');
           document.body.classList.add('fade-out');
           setTimeout(() => { window.location.href = href; }, 300);
