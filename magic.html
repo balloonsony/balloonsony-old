@@ -17,10 +17,14 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
  <style>
-    body.fade-out {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
+   body {
+  opacity: 0;
+  animation: fadein 0.4s ease forwards;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
     .posts {
       display: flex;
       flex-wrap: wrap;
@@ -198,45 +202,6 @@
       seoBlock.style.display = (seoBlock.style.display === 'none' || seoBlock.style.display === '') ? 'block' : 'none';
     }
   </script>
-<script>
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (
-      href &&
-      !href.startsWith('#') &&
-      !href.startsWith('mailto') &&
-      !link.hasAttribute('target')
-    ) {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-
-        if (document.body.classList.contains('is-transitioning')) return;
-        document.body.classList.add('is-transitioning');
-
-        // 淡出動畫
-        document.body.classList.remove('fade-in');
-        document.body.classList.add('fade-out');
-
-        // 使用 requestAnimationFrame 確保動畫渲染完成後才跳轉
-        requestAnimationFrame(() => {
-          setTimeout(() => {
-            window.location.href = href;
-          }, 300);
-        });
-      });
-    }
-  });
-
-  // 回上一頁時強制觸發淡入
-  window.addEventListener('pageshow', function(event) {
-    document.body.classList.remove('fade-out');
-    document.body.classList.add('fade-in');
-    document.body.classList.remove('is-transitioning');
-  });
-</script>
-
-
-
 
   <!-- FAQ 結構化資料 JSON-LD -->
   <script type="application/ld+json">
