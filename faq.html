@@ -162,6 +162,7 @@
   <script src="assets/js/main.js"></script>
 
 <script>
+  // 避免跳轉時手機返回記錄錯亂，並保留動畫效果
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
     if (
@@ -173,30 +174,35 @@
       link.addEventListener('click', e => {
         e.preventDefault();
 
+        // 加上旗標避免連點造成跳轉錯亂
+        if (document.body.classList.contains('is-transitioning')) return;
+        document.body.classList.add('is-transitioning');
+
         // 淡出動畫
         document.body.classList.remove('fade-in');
         document.body.classList.add('fade-out');
 
-        // 等動畫播完再跳轉
+        // 使用 location.assign 確保歷史紀錄正確處理
         setTimeout(() => {
-          window.location.href = href;
+          window.location.assign(href);
         }, 300);
       });
     }
   });
 
-  // 當返回上一頁時，自動觸發淡入動畫
+  // 頁面從快取返回時，觸發淡入動畫（解決返回白屏）
   window.addEventListener('pageshow', function(event) {
     if (
       event.persisted ||
-      (performance.getEntriesByType("navigation")[0] &&
-       performance.getEntriesByType("navigation")[0].type === "back_forward")
+      (performance.getEntriesByType("navigation")[0]?.type === "back_forward")
     ) {
       document.body.classList.remove('fade-out');
       document.body.classList.add('fade-in');
+      document.body.classList.remove('is-transitioning');
     }
   });
 </script>
+
 
  <!-- 結構化資料 FAQ JSON-LD -->
 <script type="application/ld+json">
