@@ -265,23 +265,22 @@
 </footer>
 
 <script>
-  // 只綁定「真的跳頁」的連結，不干擾 # 或 menu 用途
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
 
-    // ✅ 僅處理那些是跳外頁的連結
-    const isPageLink = href &&
-      !href.startsWith('#') &&
+    // ✅ 僅處理「跳到其他 HTML 頁」的連結（排除錨點、mail、JS、sidebar 裡面的選單）
+    const isRealPageLink = href &&
+      href.endsWith('.html') && // ✅ 僅限 .html 頁面
       !href.startsWith('mailto:') &&
       !href.startsWith('javascript:') &&
-      !link.closest('#sidebar'); // ❗不要綁到側邊欄的連結
+      !link.closest('#sidebar nav ul ul'); // ✅ 不抓巢狀子選單（表演項目）
 
-    if (isPageLink) {
+    if (isRealPageLink) {
       link.addEventListener('click', e => {
         if (!link.target || link.target === '_self') {
           e.preventDefault();
 
-          // 清除 hash
+          // ✅ 清除錨點
           if (window.location.hash) {
             history.replaceState(null, null, window.location.pathname);
           }
@@ -301,7 +300,7 @@
     document.body.classList.remove('fade-out');
     document.body.classList.add('fade-in');
 
-    // 強制 hash 對齊
+    // ✅ 若有 hash，滾到正確區塊
     if (window.location.hash) {
       const target = document.querySelector(window.location.hash);
       if (target) {
@@ -312,6 +311,7 @@
     }
   });
 </script>
+
 
 
 </body>
