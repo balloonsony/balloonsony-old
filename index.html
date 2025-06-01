@@ -285,8 +285,10 @@
     }
   });
 window.addEventListener('pageshow', function(event) {
-    document.body.classList.add('fade-in');
-  });
+  document.body.classList.remove('fade-out'); // ← 關鍵補強：移除殘留的透明效果
+  document.body.classList.add('fade-in');     // ← 套用淡入動畫，恢復顯示
+});
+
 </script>
 
 </body>
