@@ -10,6 +10,21 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
+    @media (min-width: 981px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  #wrapper {
+    margin-left: 22em;
+  }
+}
+
     .accordion {
       background-color: #f5f5f5;
       color: #c0392b;
@@ -136,17 +151,6 @@
             <li><a href="index.html#contact">聯絡方式</a></li>
           </ul>
         </nav>
-
-        <section>
-          <header class="major"><h2>聯絡方式</h2></header>
-          <ul class="contact">
-            <li class="icon brands fa-line">LINE ID：<strong>sony0613</strong></li>
-            <li class="icon solid fa-phone"><a href="tel:0930733100">電話：0930-733-100</a></li>
-            <li class="icon brands fa-instagram"><a href="https://www.instagram.com/balloonsony/" target="_blank">@balloonsony</a></li>
-            <li class="icon brands fa-facebook"><a href="https://www.facebook.com/BalloonSony/" target="_blank">粉絲團</a></li>
-          </ul>
-        </section>
-
         <footer id="footer">
           <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
         </footer>
