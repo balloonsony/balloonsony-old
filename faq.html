@@ -164,28 +164,37 @@
 <script>
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
-    if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+    if (
+      href &&
+      !href.startsWith('#') &&
+      !href.startsWith('mailto') &&
+      !link.hasAttribute('target')
+    ) {
       link.addEventListener('click', e => {
-        if (!link.target || link.target === '_self') {
-          e.preventDefault();
-          document.body.classList.remove('fade-in');
-          document.body.classList.add('fade-out');
-          setTimeout(() => {
-            // ✅ 判斷是不是從 FAQ 來的
-            if (document.referrer.includes('faq.html')) {
-              window.location.href = href; // 可正常返回上一頁
-            } else {
-              window.location.replace(href); // 不留下歷史記錄
-            }
-          }, 300);
-        }
+        e.preventDefault();
+
+        // 手動加入歷史紀錄，讓上一頁正確回到這一頁
+        history.pushState(null, '', href);
+
+        // 淡出動畫
+        document.body.classList.remove('fade-in');
+        document.body.classList.add('fade-out');
+
+        // 等動畫播完再跳轉
+        setTimeout(() => {
+          window.location.href = href;
+        }, 300);
       });
     }
   });
 
-  // ✅ 修正返回白畫面
+  // 當返回上一頁時，自動觸發淡入動畫
   window.addEventListener('pageshow', function(event) {
-    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+    if (
+      event.persisted ||
+      (performance.getEntriesByType("navigation")[0] &&
+       performance.getEntriesByType("navigation")[0].type === "back_forward")
+    ) {
       document.body.classList.remove('fade-out');
       document.body.classList.add('fade-in');
     }
