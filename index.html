@@ -229,7 +229,7 @@
       <nav id="menu">
         <header class="major"><h2>選單</h2></header>
         <ul>
-          <li><a href="index.html">首頁</a></li>
+          <li><a href="#">首頁</a></li>
           <li>
             <span class="opener">表演項目</span>
             <ul>
@@ -264,56 +264,28 @@
   <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
 </footer>
 
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 <script>
-  // 僅針對 <div id="main"> 區域裡的 .html 連結執行淡出動畫與跳轉
-  document.querySelectorAll('#main a[href]').forEach(link => {
+  document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
-
-    // 僅針對 .html 結尾的連結
-    if (
-      href &&
-      href.endsWith('.html') &&
-      !href.startsWith('mailto:') &&
-      !href.startsWith('javascript:')
-    ) {
+    if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
       link.addEventListener('click', e => {
         if (!link.target || link.target === '_self') {
           e.preventDefault();
-
-          // 清除錨點（避免上一頁卡在特定區塊）
-          if (window.location.hash) {
-            history.replaceState(null, null, window.location.pathname);
-          }
-
           document.body.classList.remove('fade-in');
           document.body.classList.add('fade-out');
-
-          setTimeout(() => {
-            window.location.assign(href);
-          }, 300);
+          setTimeout(() => { window.location.href = href; }, 300);
         }
       });
     }
   });
 
-  // 頁面從 cache 回來時重新觸發淡入與滾動定位
-  window.addEventListener('pageshow', function(event) {
-    document.body.classList.remove('fade-out');
-    document.body.classList.add('fade-in');
-
-    if (window.location.hash) {
-      const target = document.querySelector(window.location.hash);
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-      }
-    }
-  });
 </script>
-
-
-
 
 </body>
 </html>
