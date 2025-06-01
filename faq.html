@@ -173,9 +173,6 @@
       link.addEventListener('click', e => {
         e.preventDefault();
 
-        // 手動加入歷史紀錄，讓上一頁正確回到這一頁
-        history.pushState(null, '', href);
-
         // 淡出動畫
         document.body.classList.remove('fade-in');
         document.body.classList.add('fade-out');
