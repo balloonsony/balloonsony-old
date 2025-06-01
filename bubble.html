@@ -17,10 +17,15 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
-    body.fade-out {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
+  body {
+  opacity: 0;
+  animation: fadein 0.4s ease forwards;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
     .posts {
       display: flex;
       flex-wrap: wrap;
@@ -192,20 +197,6 @@
       const seoBlock = document.getElementById('seo-keywords');
       seoBlock.style.display = (seoBlock.style.display === 'none' || seoBlock.style.display === '') ? 'block' : 'none';
     }
-    document.querySelectorAll('a[href]').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
-        link.addEventListener('click', e => {
-          if (!link.target || link.target === '_self') {
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-              window.location.href = href;
-            }, 300);
-          }
-        });
-      }
-    });
   </script>
 
   <!-- FAQ JSON-LD 結構化資料 -->
