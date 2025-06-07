@@ -20,6 +20,32 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
+    .posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center; /* ✅ 這行讓圖片群組整體置中 */
+}
+
+.posts figure {
+  text-align: center;        /* ✅ 這行讓單張圖片與圖說置中 */
+  margin: 0;
+  max-width: 300px;          /* 可選，避免圖片太大跑版 */
+}
+
+.posts img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;            /* 確保圖片水平置中 */
+}
+
+.posts figcaption {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.5em;
+}
+
     @media (min-width: 981px) {
   #sidebar {
     position: fixed;
