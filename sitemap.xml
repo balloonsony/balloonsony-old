@@ -24,4 +24,8 @@
     <loc>https://balloonsony.com/faq.html</loc>
     <priority>0.60</priority>
   </url>
+  <url>
+    <loc>https://balloonsony.com/blog.html</loc>
+    <priority>0.70</priority>
+  </url>
 </urlset>
