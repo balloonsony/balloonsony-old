@@ -107,7 +107,7 @@
     height: auto;
     box-sizing: border-box;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; /* 手機版置中 */
   }
 
   figure {
@@ -143,15 +143,18 @@
   @media screen and (min-width: 768px) {
     img {
       max-width: 800px;
+      margin: 0 0 1em 20px; /* 靠左顯示並留左白邊 */
     }
 
     figure {
       max-width: 800px;
-      margin-left: auto;
+      margin-left: 20px;
       margin-right: auto;
+      text-align: left;
     }
   }
 </style>
+
 
 </head>
 <body class="is-preload">
