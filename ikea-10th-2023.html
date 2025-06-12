@@ -9,42 +9,20 @@
   <link rel="canonical" href="https://balloonsony.com/ikea10th.html" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  
+
   <style>
-    /* 基本樣式 */
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", sans-serif;
-      color: #333;
-    }
-
-    h1 {
-      font-size: 1.8em;
-      line-height: 1.4;
-      margin: 0.5em 0;
-      word-break: break-word;
-    }
-
-    p, li {
-      line-height: 1.7;
-      font-size: 1em;
-    }
-
-    ul {
-      padding-left: 1.5em;
-    }
-
-    img {
+    /* 修正圖片樣式 */
+    img.blog-image {
       max-width: 100%;
       height: auto;
       display: block;
       margin-left: 20px;
-      margin-bottom: 1em;
-      border-radius: 5px;
+      margin-right: auto;
+      margin-bottom: 1.5em;
     }
 
     figure {
-      margin: 1em 0;
+      margin: 0 0 2em 0;
     }
 
     figcaption {
@@ -53,65 +31,24 @@
       margin-left: 20px;
     }
 
-    /* 響應式設計 */
-    @media screen and (max-width: 768px) {
-      h1 {
-        font-size: 1.4em;
-        text-align: center;
-      }
+    /* 標題調整 */
+    h1 {
+      font-size: 1.8em;
+      line-height: 1.4;
+      word-break: break-word;
+    }
 
-      img, figcaption {
+    @media screen and (max-width: 768px) {
+      img.blog-image,
+      figcaption {
         margin-left: 0;
         margin-right: 0;
       }
 
-      #sidebar {
-        display: block;
-        width: 100%;
+      h1 {
+        font-size: 1.4em;
+        text-align: center;
       }
-    }
-
-    #wrapper {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-
-    #main {
-      flex: 1;
-      padding: 1.5em;
-    }
-
-    #sidebar {
-      width: 260px;
-      padding: 1em;
-      background: #f9f9f9;
-    }
-
-    /* 保證 sidebar 在小裝置也顯示 */
-    @media screen and (max-width: 768px) {
-      #wrapper {
-        flex-direction: column;
-      }
-
-      #sidebar {
-        width: 100%;
-      }
-    }
-
-    /* 區塊標題 */
-    header h1 {
-      border-bottom: 3px solid #e74c3c;
-      padding-bottom: 0.3em;
-      margin-bottom: 0.6em;
-    }
-
-    blockquote {
-      border-left: 4px solid #ccc;
-      margin: 1em 0;
-      padding-left: 1em;
-      color: #555;
-      font-style: italic;
     }
   </style>
 </head>
@@ -145,7 +82,7 @@
       </div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main -->
     <div id="main">
       <div class="inner">
         <header>
@@ -163,14 +100,14 @@
           </ul>
 
           <figure>
-            <img src="images/taichung-ikea10th-group-2023.jpg" alt="IKEA 台中十週年活動現場，氣球大叔 Sony 與眾多家庭合影" />
+            <img src="images/taichung-ikea10th-group-2023.jpg" alt="IKEA 台中十週年活動現場，氣球大叔 Sony 與眾多家庭合影" class="blog-image" />
             <figcaption>活動結束後，氣球大叔與現場觀眾開心合影留念。</figcaption>
           </figure>
 
           <p>整場演出氣氛熱烈，從孩子到大人無不投入其中。透過互動式氣球魔術，孩子們開心上台體驗，小禮物與搞笑橋段讓場面充滿歡笑。</p>
 
           <figure>
-            <img src="images/taichung-ikea10th-stage-2023.jpg" alt="舞台上氣球魔術拼圖展示 IKEA 10th logo，氣球大叔 Sony 演出中" />
+            <img src="images/taichung-ikea10th-stage-2023.jpg" alt="舞台上氣球魔術拼圖展示 IKEA 10th logo，氣球大叔 Sony 演出中" class="blog-image" />
             <figcaption>演出高潮，Sony 展示 IKEA 10th logo 拼圖，現場掌聲不斷。</figcaption>
           </figure>
 
