@@ -11,13 +11,12 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
   <style>
-    /* 修正圖片樣式 */
+    /* 修正圖片樣式與版面邊距 */
     img.blog-image {
       max-width: 100%;
       height: auto;
       display: block;
       margin-left: 20px;
-      margin-right: auto;
       margin-bottom: 1.5em;
     }
 
@@ -31,7 +30,7 @@
       margin-left: 20px;
     }
 
-    /* 標題調整 */
+    /* 調整標題大小 */
     h1 {
       font-size: 1.8em;
       line-height: 1.4;
@@ -42,7 +41,6 @@
       img.blog-image,
       figcaption {
         margin-left: 0;
-        margin-right: 0;
       }
 
       h1 {
@@ -55,8 +53,9 @@
 
 <body class="is-preload">
   <div id="wrapper">
-    <!-- Sidebar -->
-    <div id="sidebar">
+    
+    <!-- Sidebar 必須放在 wrapper 最上方 -->
+    <section id="sidebar">
       <div class="inner">
         <nav id="menu">
           <header class="major"><h2>選單</h2></header>
@@ -80,9 +79,9 @@
           <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
         </footer>
       </div>
-    </div>
+    </section>
 
-    <!-- Main -->
+    <!-- Main 主體內容放在 sidebar 後面 -->
     <div id="main">
       <div class="inner">
         <header>
