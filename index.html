@@ -44,11 +44,17 @@
     #banner .text-block { flex:1; }
     #banner .image-block { flex:1; text-align:right; }
     #banner .image-block img { max-width:800px; width:100%; height:auto; display:block; margin:0 auto; }
-    @media (max-width:768px){
-      #banner .content { flex-direction:column; text-align:center; }
-      #banner .image-block { order:1; text-align:center; }
-      #banner .text-block { order:2; text-align:left; }
-    }
+#banner + #story-cert {
+  border-top: none !important;
+  margin-top: -1rem !important;
+}
+
+@media (max-width:768px){
+  #banner .content { flex-direction:column; text-align:center; }
+  #banner .image-block { order:1; text-align:center; }
+  #banner .text-block { order:2; text-align:left; }
+}
+
 
     /* story-cert 原樣保留 */
     @media screen and (min-width:769px){
