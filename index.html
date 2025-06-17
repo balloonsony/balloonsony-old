@@ -56,38 +56,44 @@
 }
 
 
-    /* story-cert 原樣保留 */
-    @media screen and (min-width:769px){
-      #story-cert { display:flex; flex-wrap:wrap; gap:1em; align-items:center; }
-      #story-cert .story-img { flex:1 1 45%; max-width:500px; }
-      #story-cert .story-text { flex:2 1 50%; }
-    }
-    @media screen and (max-width:768px){
-      #story-cert { display:block; }
-      #story-cert .story-img, #story-cert .story-text { width:100%; }
-      #story-cert .story-text { margin-top:1em; }
-    }
-    #banner + #story-cert {
-  border-top: none !important;
-}
+  <style>
+  /* story-cert 原樣保留 */
+  @media screen and (min-width:769px){
+    #story-cert { display:flex; flex-wrap:wrap; gap:1em; align-items:center; }
+    #story-cert .story-img { flex:1 1 45%; max-width:500px; }
+    #story-cert .story-text { flex:2 1 50%; }
+  }
+  @media screen and (max-width:768px){
+    #story-cert { display:block; }
+    #story-cert .story-img, #story-cert .story-text { width:100%; }
+    #story-cert .story-text { margin-top:1em; }
+  }
 
-#banner {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
+  /* 精準貼近：只改關於我與父女區塊，不影響其他 */
+  #banner + #story-cert {
+    border-top: none !important;
+  }
 
-#banner .content {
-  padding-bottom: 0 !important;
-}
+  #banner {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
 
-#story-cert {
-  margin-top: -4rem !important;
-}
-  </style>
-</head>
-<body class="is-preload">
-  <div id="wrapper">
-    <div id="main"><div class="inner">
+  #banner .content {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  #banner .text-block p:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #story-cert {
+    margin-top: -4rem !important;
+  }
+</style>
+
 
       <!-- Header -->
       <header id="header">
