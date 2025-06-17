@@ -43,96 +43,48 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
   <style>
-
-  /* 統一父女文字對齊及 margin */
-  #story-cert {
-    margin: 0 1rem !important;
-    text-align: center; /* 或 left 看你想要整段對齊方式 */
-  }
-  #story-cert .story-text {
-    text-align: inherit;
-  }
-}
-
-    /* === 圖片走廊 === */
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2em;
-      justify-content: center;
-      padding: 1em 0;
-    }
-    .gallery figure {
-      flex: 1 1 45%;
-      max-width: 480px;
-      margin: 0;
+    #story-cert {
+      margin: 0 1rem !important;
       text-align: center;
     }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
+    #story-cert .story-text {
+      text-align: inherit;
     }
-    .gallery img:hover { transform: scale(1.05); }
-    .gallery figcaption {
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 0.5em;
-    }
-    @media (max-width: 768px) { .gallery figure { flex: 1 1 100%; } }
 
-    /* === 表演項目卡片 === */
-    .features.flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2em;
-    }
-    .feature-card {
-      flex: 1 1 calc(50% - 2em);
-      background: none;
-      padding: 1.5em;
-      border-radius: 0.5em;
-      color: inherit;
-      text-decoration: none;
-      transition: transform 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 1.5em;
-    }
-    .feature-card:hover { transform: scale(1.05); }
-    .feature-card .icon { font-size: 2.5em; flex-shrink: 0; }
-    .feature-card .content h3 {
-      margin: 0 0 0.4em;
-      font-size: 1.3em;
-    }
-    .feature-card .content p {
-      margin: 0;
-      font-size: 0.95em;
-      line-height: 1.5;
-    }
-    @media (max-width: 768px) {
-      .feature-card {
-        flex: 1 1 100%;
-        flex-direction: column;
-        text-align: center;
+    @media screen and (min-width: 769px) {
+      #story-cert {
+        margin: -4rem 1rem 0 1rem !important;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        align-items: center;
+      }
+      #story-cert .story-img {
+        flex: 1 1 45%;
+        max-width: 500px;
+        order: 1;
+      }
+      #story-cert .story-text {
+        flex: 2 1 50%;
+        order: 2;
+        text-align: left;
       }
     }
 
-    /* === 側邊欄固定 === */
-    @media (min-width: 981px) {
-      #sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        overflow-y: auto;
-        z-index: 1000;
+    @media screen and (max-width: 768px) {
+      #story-cert {
+        margin: 0 1rem 0 1rem !important;
+        display: block;
       }
-      #wrapper { margin-left: 22em; }
+      #story-cert .story-img,
+      #story-cert .story-text {
+        width: 100%;
+      }
+      #story-cert .story-text {
+        margin-top: 1em;
+      }
     }
 
-    /* === Banner 區塊 === */
     #banner {
       margin-bottom: 0 !important;
       padding-bottom: 0 !important;
@@ -145,8 +97,6 @@
       gap: 40px;
       flex-wrap: wrap;
       max-width: 100%;
-      padding-bottom: 0 !important;
-      margin-bottom: 0 !important;
     }
     #banner .text-block p:last-child {
       margin-bottom: 0 !important;
@@ -166,42 +116,9 @@
         text-align: left;
       }
     }
-
-    /* === 調整關於我與父女故事的間距 === */
-    #banner + #story-cert {
-      border-top: none !important;
-    }
-    @media screen and (min-width: 769px) {
-      #story-cert {
-        margin: -4rem 1rem 0 1rem !important;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1em;
-        align-items: center;
-      }
-      #story-cert .story-img {
-        flex: 1 1 45%;
-        max-width: 500px;
-      }
-      #story-cert .story-text {
-        flex: 2 1 50%;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      #story-cert {
-        margin: 0 1rem 0 1rem !important;
-        display: block;
-      }
-      #story-cert .story-img,
-      #story-cert .story-text {
-        width: 100%;
-      }
-      #story-cert .story-text {
-        margin-top: 1em;
-      }
-    }
   </style>
 </head>
+
 <body class="is-preload">
   <div id="wrapper">
     <div id="main"><div class="inner">
@@ -230,7 +147,7 @@
         </div>
       </section>
 
-      <!-- 父女故事 + 證照 -->
+      <!-- 父女故事 -->
       <section id="story-cert">
         <div class="story-img">
           <img src="images/sonydaughter.webp" alt="氣球大叔 Sony 與女兒溫馨畫面" style="width:100%; height:auto; border-radius:8px;" />
@@ -241,6 +158,8 @@
           <p>每一聲笑聲、每一片掌聲，都是我最寶貴的回報，也是我持續努力的動力。</p>
         </div>
       </section>
+    </div></div>
+  </div>
     <!-- 表演項目 -->
     <section id="services">
       <header class="major"><h2>表演項目</h2></header>
