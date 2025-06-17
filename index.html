@@ -43,6 +43,24 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
   <style>
+    @media (max-width: 768px) {
+  /* 調整 Banner 圖不炸板 */
+  #banner .image-block img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  /* 統一父女文字對齊及 margin */
+  #story-cert {
+    margin: 0 1rem !important;
+    text-align: center; /* 或 left 看你想要整段對齊方式 */
+  }
+  #story-cert .story-text {
+    text-align: inherit;
+  }
+}
+
     /* === 圖片走廊 === */
     .gallery {
       display: flex;
