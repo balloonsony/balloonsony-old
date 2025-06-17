@@ -43,9 +43,7 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
   <style>
-    /* 整合版：所有原本內容完整，無一刪減 */
-
-    /* 圖片走廊 */
+    /* === 圖片走廊 === */
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -65,19 +63,15 @@
       border-radius: 8px;
       transition: transform 0.3s ease;
     }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+    .gallery img:hover { transform: scale(1.05); }
     .gallery figcaption {
       font-size: 0.9em;
       color: #666;
       margin-top: 0.5em;
     }
-    @media (max-width: 768px) {
-      .gallery figure { flex: 1 1 100%; }
-    }
+    @media (max-width: 768px) { .gallery figure { flex: 1 1 100%; } }
 
-    /* 表演項目卡片 */
+    /* === 表演項目卡片 === */
     .features.flex {
       display: flex;
       flex-wrap: wrap;
@@ -95,13 +89,8 @@
       align-items: center;
       gap: 1.5em;
     }
-    .feature-card:hover {
-      transform: scale(1.05);
-    }
-    .feature-card .icon {
-      font-size: 2.5em;
-      flex-shrink: 0;
-    }
+    .feature-card:hover { transform: scale(1.05); }
+    .feature-card .icon { font-size: 2.5em; flex-shrink: 0; }
     .feature-card .content h3 {
       margin: 0 0 0.4em;
       font-size: 1.3em;
@@ -119,7 +108,7 @@
       }
     }
 
-    /* 側邊欄固定 */
+    /* === 側邊欄固定 === */
     @media (min-width: 981px) {
       #sidebar {
         position: fixed;
@@ -129,12 +118,10 @@
         overflow-y: auto;
         z-index: 1000;
       }
-      #wrapper {
-        margin-left: 22em;
-      }
+      #wrapper { margin-left: 22em; }
     }
 
-    /* Banner 區塊樣式 */
+    /* === Banner 區塊 === */
     #banner {
       margin-bottom: 0 !important;
       padding-bottom: 0 !important;
@@ -149,18 +136,6 @@
       max-width: 100%;
       padding-bottom: 0 !important;
       margin-bottom: 0 !important;
-    }
-    #banner .text-block { flex: 1; }
-    #banner .image-block {
-      flex: 1;
-      text-align: right;
-    }
-    #banner .image-block img {
-      max-width: 800px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
     }
     #banner .text-block p:last-child {
       margin-bottom: 0 !important;
@@ -181,17 +156,13 @@
       }
     }
 
-    /* 調整關於我與父女故事間距 */
+    /* === 調整關於我與父女故事的間距 === */
     #banner + #story-cert {
       border-top: none !important;
     }
-    #story-cert {
-      margin-top: -4rem !important;
-    }
-
-    /* story-cert 區塊保留原排版 */
     @media screen and (min-width: 769px) {
       #story-cert {
+        margin: -4rem 1rem 0 1rem !important;
         display: flex;
         flex-wrap: wrap;
         gap: 1em;
@@ -207,6 +178,7 @@
     }
     @media screen and (max-width: 768px) {
       #story-cert {
+        margin: 0 1rem 0 1rem !important;
         display: block;
       }
       #story-cert .story-img,
@@ -218,7 +190,6 @@
       }
     }
   </style>
-
 </head>
 <body class="is-preload">
   <div id="wrapper">
@@ -228,6 +199,7 @@
         <p>魔術、氣球、泡泡秀、會場佈置的專業表演者</p>
       </header>
 
+      <!-- Banner + 關於我 -->
       <section id="banner" class="style1">
         <div class="content">
           <div class="text-block">
@@ -242,14 +214,15 @@
             </p>
           </div>
           <div class="image-block">
-            <img src="images/index6.png" alt="氣球大叔帶著高高的氣球帽子，與現場孩子開心對視" />
+            <img src="images/index6.webp" alt="氣球大叔帶著高高的氣球帽子，與現場孩子開心對視" />
           </div>
         </div>
       </section>
 
-      <section id="story-cert" style="margin: 0 1rem 0 1rem;">
+      <!-- 父女故事 + 證照 -->
+      <section id="story-cert">
         <div class="story-img">
-          <img src="images/sonydaughter.webp" alt="氣球大叔 Sony 與女兒溫馨畫面" style="width:100%;height:auto;border-radius:8px;" />
+          <img src="images/sonydaughter.webp" alt="氣球大叔 Sony 與女兒溫馨畫面" style="width:100%; height:auto; border-radius:8px;" />
         </div>
         <div class="story-text">
           <p>那一年，我為了讓女兒開心，親手折出第一顆氣球。當她笑到眼睛彎成一條線的那瞬間，我深深感受到：<strong>我想把這份純粹的快樂，帶給更多孩子與家庭。</strong></p>
@@ -257,7 +230,6 @@
           <p>每一聲笑聲、每一片掌聲，都是我最寶貴的回報，也是我持續努力的動力。</p>
         </div>
       </section>
-
     <!-- 表演項目 -->
     <section id="services">
       <header class="major"><h2>表演項目</h2></header>
