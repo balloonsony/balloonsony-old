@@ -43,48 +43,8 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
   <style>
-    #story-cert {
-      margin: 0 1rem !important;
-      text-align: center;
-    }
-    #story-cert .story-text {
-      text-align: inherit;
-    }
-
-    @media screen and (min-width: 769px) {
-      #story-cert {
-        margin: -4rem 1rem 0 1rem !important;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1em;
-        align-items: center;
-      }
-      #story-cert .story-img {
-        flex: 1 1 45%;
-        max-width: 500px;
-        order: 1;
-      }
-      #story-cert .story-text {
-        flex: 2 1 50%;
-        order: 2;
-        text-align: left;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      #story-cert {
-        margin: 0 1rem 0 1rem !important;
-        display: block;
-      }
-      #story-cert .story-img,
-      #story-cert .story-text {
-        width: 100%;
-      }
-      #story-cert .story-text {
-        margin-top: 1em;
-      }
-    }
-
+    /* ======================== */
+    /* Banner 區塊調整 */
     #banner {
       margin-bottom: 0 !important;
       padding-bottom: 0 !important;
@@ -115,13 +75,59 @@
         order: 2;
         text-align: left;
       }
+      #banner .image-block img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
     }
+
+    /* 父女故事（story‑cert）排版 */
+    #banner + #story-cert {
+      border-top: none !important;
+    }
+    @media (max-width: 768px) {
+      #story-cert {
+        display: block !important;
+        margin: 1rem !important;
+        text-align: center;
+      }
+      #story-cert .story-img,
+      #story-cert .story-text {
+        width: 100%;
+      }
+      #story-cert .story-text {
+        margin-top: 1em;
+        text-align: left;
+      }
+    }
+    @media (min-width: 769px) {
+      #story-cert {
+        display: flex !important;
+        flex-wrap: nowrap;
+        gap: 1em;
+        align-items: center;
+        margin: -4rem 1rem 0 1rem !important;
+      }
+      #story-cert .story-img {
+        flex: 0 0 45%;
+        max-width: 500px;
+        order: 1;
+      }
+      #story-cert .story-text {
+        flex: 1 1 50%;
+        order: 2;
+        text-align: left;
+      }
+    }
+    /* ======================== */
   </style>
 </head>
 
 <body class="is-preload">
   <div id="wrapper">
     <div id="main"><div class="inner">
+      <!-- Header -->
       <header id="header">
         <h1>氣球大叔 Sony</h1>
         <p>魔術、氣球、泡泡秀、會場佈置的專業表演者</p>
@@ -158,6 +164,7 @@
           <p>每一聲笑聲、每一片掌聲，都是我最寶貴的回報，也是我持續努力的動力。</p>
         </div>
       </section>
+
     </div></div>
   </div>
     <!-- 表演項目 -->
