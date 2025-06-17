@@ -203,11 +203,13 @@
 </section>
 
 <!-- 父女故事 + 證照 -->
-<section id="story-cert" style="
-  margin:2em 1rem;
-">
+<section id="story-cert" style="margin: 2em 1rem;">
   <style>
-    /* 桌機：左右並列 */
+    #story-cert p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
     @media screen and (min-width: 769px) {
       #story-cert {
         display: flex;
@@ -215,19 +217,27 @@
         gap: 1em;
         align-items: center;
       }
-      #story-cert .story-img { flex: 1 1 45%; max-width: 500px; }
-      #story-cert .story-text { flex: 2 1 50%; }
+
+      #story-cert .story-img {
+        flex: 1 1 45%;
+        max-width: 500px;
+      }
+
+      #story-cert .story-text {
+        flex: 2 1 50%;
+      }
     }
 
-    /* 手機：圖片在上，文字在下 */
     @media screen and (max-width: 768px) {
       #story-cert {
         display: block;
       }
+
       #story-cert .story-img,
       #story-cert .story-text {
         width: 100%;
       }
+
       #story-cert .story-text {
         margin-top: 1em;
       }
@@ -237,16 +247,17 @@
   <div class="story-img">
     <img src="images/sonydaughter.jpg"
          alt="氣球大叔 Sony 手持氣球做的行李箱與女兒的溫馨時刻"
-         style="width:100%; height:auto; border-radius:8px;">
+         style="width: 100%; height: auto; border-radius: 8px;">
   </div>
+
   <div class="story-text">
-    <p style="font-size:1.1rem; line-height:1.6;">
+    <p>
       那一年，我為了讓女兒開心，親手折出第一顆氣球。當她笑到眼睛彎成一條線的那瞬間，我深深感受到：<strong>我想把這份純粹的快樂，帶給更多孩子與家庭。</strong>
     </p>
-    <p style="font-size:1.1rem; line-height:1.6;">
+    <p>
       於是，我帶著行李箱與氣球，一場接一場從街頭演出開始，不斷累積經驗與信任。接著，我陸續考取了 <strong>基隆、台北、新北、桃園、新竹、台中</strong> 共六縣市的街頭藝人證照，讓每一次表演都合法、安全，並給家長更多安心保障。
     </p>
-    <p style="font-size:1.1rem; line-height:1.6;">
+    <p>
       每一聲笑聲、每一片掌聲，都是我最寶貴的回報，也是我持續努力的動力。
     </p>
   </div>
