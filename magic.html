@@ -229,7 +229,7 @@
       </div>
     </div>
 
-        <!-- 側邊選單（引用 sidebar.html） -->
+    <!-- 側邊選單（引用 sidebar.html） -->
 <div id="sidebar">
   <div class="inner"></div>
 </div>
@@ -238,6 +238,9 @@
     .then(res => res.text())
     .then(data => {
       document.querySelector('#sidebar .inner').innerHTML = data;
+      const script = document.createElement('script');
+      script.src = 'assets/js/main.js';
+      document.body.appendChild(script);
     });
 </script>
     
