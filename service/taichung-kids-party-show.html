@@ -82,19 +82,19 @@
       </div>
     </div>
 
-    <div id="sidebar">
-      <div class="inner"></div>
-    </div>
-    <script>
-      fetch('../sidebar.html')
-        .then(res => res.text())
-        .then(data => {
-          document.querySelector('#sidebar .inner').innerHTML = data;
-          const script = document.createElement('script');
-          script.src = '../assets/js/main.js';
-          document.body.appendChild(script);
-        });
-    </script>
+<div id="sidebar">
+  <div class="inner"></div>
+</div>
+<script>
+  fetch('/sidebar.html')  
+    .then(res => res.text())
+    .then(data => {
+      document.querySelector('#sidebar .inner').innerHTML = data;
+      const script = document.createElement('script');
+      script.src = '/assets/js/main.js'; 
+      document.body.appendChild(script);
+    });
+</script>
 
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/browser.min.js"></script>
