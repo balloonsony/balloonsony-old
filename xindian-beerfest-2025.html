@@ -91,14 +91,15 @@
       </div>
     </div>
 
-<!-- 側邊選單（引用 sidebar.html） -->
-<div id="sidebar"></div>
-
+    <!-- 側邊選單（引用 sidebar.html） -->
+<div id="sidebar">
+  <div class="inner"></div>
+</div>
 <script>
   fetch('sidebar.html')
     .then(res => res.text())
     .then(data => {
-      document.getElementById('sidebar').innerHTML = data;
+      document.querySelector('#sidebar .inner').innerHTML = data;
     });
 </script>
 
