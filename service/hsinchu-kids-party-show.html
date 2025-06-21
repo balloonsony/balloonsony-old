@@ -93,6 +93,7 @@
   fetch('../sidebar.html')
     .then(res => res.text())
     .then(data => {
+        console.log('sidebar 成功載入');
       document.querySelector('#sidebar .inner').innerHTML = data;
 
       const scripts = [
