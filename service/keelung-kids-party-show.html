@@ -91,25 +91,26 @@
 
 <!-- 載入 sidebar 後再載入 main.js 和其他腳本 -->
 <script>
-  fetch('../sidebar.html')
+  fetch('/sidebar.html')
     .then(res => res.text())
     .then(data => {
       document.querySelector('#sidebar .inner').innerHTML = data;
 
-      // 必要腳本載入
+      // 必要腳本載入（使用絕對路徑更穩定）
       const scripts = [
-        '../assets/js/jquery.min.js',
-        '../assets/js/browser.min.js',
-        '../assets/js/breakpoints.min.js',
-        '../assets/js/util.js',
-        '../assets/js/main.js'
+        '/assets/js/jquery.min.js',
+        '/assets/js/browser.min.js',
+        '/assets/js/breakpoints.min.js',
+        '/assets/js/util.js',
+        '/assets/js/main.js'
       ];
       scripts.forEach(src => {
         const script = document.createElement('script');
         script.src = src;
         document.body.appendChild(script);
       });
-    });
+    })
+    .catch(err => console.error('載入 sidebar 失敗:', err));
 </script>
 
 <!-- 可選：SEO 控制功能 -->
@@ -122,4 +123,5 @@
 
 </body>
 </html>
+
 
