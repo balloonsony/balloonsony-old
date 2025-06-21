@@ -96,171 +96,44 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   
- <style>
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    justify-content: center;
-    padding: 1em 0;
-  }
-  #banner + #story-cert {
-    border-top: none !important;
-    margin-top: -2rem !important;
-  }
-  .gallery figure {
-    flex: 1 1 45%;
-    max-width: 480px;
-    margin: 0;
-    text-align: center;
-  }
-  .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-  .gallery img:hover {
-    transform: scale(1.05);
-  }
-  .gallery figcaption {
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 0.5em;
-  }
-  @media (max-width: 768px) {
-    .gallery figure {
-      flex: 1 1 100%;
-    }
-  }
+  <style>
+    /* 原始所有自訂 CSS 都保留 */
+    .gallery {display:flex;flex-wrap:wrap;gap:2em;justify-content:center;padding:1em 0;}
+    #banner + #story-cert {border-top:none!important;margin-top:-2rem!important;}
+    .gallery figure {flex:1 1 45%;max-width:480px;margin:0;text-align:center;}
+    .gallery img {width:100%;height:auto;border-radius:8px;transition:transform .3s ease;}
+    .gallery img:hover {transform:scale(1.05);}
+    .gallery figcaption {font-size:.9em;color:#666;margin-top:.5em;}
+    @media (max-width:768px){.gallery figure{flex:1 1 100%;}}
 
-  .features.flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-  }
-  .feature-card {
-    flex: 1 1 calc(50% - 2em);
-    background: none;
-    padding: 1.5em;
-    border-radius: 0.5em;
-    color: inherit;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 1.5em;
-  }
-  .feature-card:hover {
-    transform: scale(1.05);
-  }
-  .feature-card .icon {
-    font-size: 2.5em;
-    flex-shrink: 0;
-  }
-  .feature-card .content h3 {
-    margin: 0 0 0.4em;
-    font-size: 1.3em;
-  }
-  .feature-card .content p {
-    margin: 0;
-    font-size: 0.95em;
-    line-height: 1.5;
-  }
-  @media (max-width: 768px) {
-    .feature-card {
-      flex: 1 1 100%;
-      flex-direction: column;
-      text-align: center;
-    }
-  }
+    .features.flex {display:flex;flex-wrap:wrap;gap:2em;}
+    .feature-card {flex:1 1 calc(50% - 2em);background:none;padding:1.5em;border-radius:.5em;color:inherit;text-decoration:none;transition:transform .3s ease;display:flex;align-items:center;gap:1.5em;}
+    .feature-card:hover {transform:scale(1.05);}
+    .feature-card .icon {font-size:2.5em;flex-shrink:0;}
+    .feature-card .content h3 {margin:0 0 .4em;font-size:1.3em;}
+    .feature-card .content p {margin:0;font-size:.95em;line-height:1.5;}
+    @media (max-width:768px){.feature-card {flex:1 1 100%;flex-direction:column;text-align:center;}}
 
-  #banner .content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 100%;
-    padding: 2rem 1rem 0.5rem 1rem;
-  }
-  #banner .text-block {
-    flex: 1;
-  }
-  #banner .image-block {
-    flex: 1;
-    text-align: right;
-  }
-  #banner .image-block img {
-    max-width: 800px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  @media (max-width: 768px) {
-    #banner .content {
-      flex-direction: column;
-      text-align: center;
-    }
-    #banner .image-block {
-      order: 1;
-      text-align: center;
-    }
-    #banner .text-block {
-      order: 2;
-      text-align: left;
-    }
-  }
-
-  @media (min-width: 769px) {
-    #story-cert {
-      display: flex !important;
-      align-items: center;
-      gap: 1em;
-    }
-    #story-cert .story-img {
-      flex: 1 1 45%;
-      max-width: 500px;
-    }
-    #story-cert .story-text {
-      flex: 2 1 50%;
-    }
-  }
-
-  /* 🛠 桌機固定側邊欄＋主內容可捲動（解決捲軸問題） */
-  @media (min-width: 981px) {
-    html, body {
-      height: 100%;
-      overflow: hidden;
+    /* 🖥 桌機釘側邊，不要漢堡 */
+    @media (min-width: 981px) {
+      #sidebar {position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:1000;}
+      #wrapper {margin-left:22em;}
+      #sidebar .toggle {display: none;}
     }
 
-    #sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 22em;
-      height: 100vh;
-      overflow-y: auto;
-      z-index: 1000;
-    }
+    #banner .content {display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;max-width:100%;padding:2rem 1rem .5rem 1rem;}
+    #banner .text-block {flex:1;}
+    #banner .image-block {flex:1;text-align:right;}
+    #banner .image-block img {max-width:800px;width:100%;height:auto;display:block;margin:0 auto;}
+    @media (max-width:768px){#banner .content{flex-direction:column;text-align:center;}#banner .image-block{order:1;text-align:center;}#banner .text-block{order:2;text-align:left;}}
 
-    #wrapper {
-      position: absolute;
-      top: 0;
-      left: 22em;
-      right: 0;
-      bottom: 0;
-      overflow-y: auto;
+    /* 📷 桌機 story-cert 照片左、文字右 */
+    @media (min-width:769px) {
+      #story-cert {display:flex !important;align-items:center;gap:1em;}
+      #story-cert .story-img {flex:1 1 45%;max-width:500px;}
+      #story-cert .story-text {flex:2 1 50%;}
     }
-
-    #sidebar .toggle {
-      display: none !important;
-    }
-  }
-</style>
-
+  </style>
 </head>
 
 <body class="is-preload">
