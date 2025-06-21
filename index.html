@@ -486,9 +486,15 @@
     seoBlock.style.display = (seoBlock.style.display === 'none' || seoBlock.style.display === '') ? 'block' : 'none';
   }
 </script>
-  <!-- 側邊選單 -->
-  <div id="sidebar"><div class="inner">
-    <nav id="menu"><header class="major"><h2>選單</h2></header>
+<!-- 側邊選單 -->
+<div id="sidebar">
+  <div class="inner" style="display:flex; flex-direction:column; height:100vh; justify-content:space-between;">
+    <!-- 漢堡按鈕（手機） -->
+    <a href="#menu" class="toggle"><span>選單</span></a>
+
+    <!-- 主選單 -->
+    <nav id="menu">
+      <header class="major"><h2>選單</h2></header>
       <ul>
         <li><a href="index.html">首頁</a></li>
         <li><span class="opener">表演項目</span>
@@ -497,7 +503,7 @@
             <li><a href="bubble.html">泡泡秀</a></li>
             <li><a href="balloon.html">造型氣球</a></li>
             <li><a href="decor.html">會場佈置</a></li>
-                </ul>
+          </ul>
         </li>
         <li><span class="opener">服務地區</span>
           <ul>
@@ -516,16 +522,20 @@
         <li><a href="#contact">聯絡方式</a></li>
       </ul>
     </nav>
-    <footer id="footer"><p>&copy; 氣球大叔 Sony. All rights reserved.</p></footer>
-  </div></div>
+
+    <!-- 底部版權 -->
+    <footer id="footer" style="padding-bottom:40px;">
+      <p class="copyright">&copy; 氣球大叔 Sony. All rights reserved.</p>
+    </footer>
+  </div>
 </div>
 
-<!-- JS -->
+<!-- JavaScript 放最底，確保載入順序正確 -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
-
