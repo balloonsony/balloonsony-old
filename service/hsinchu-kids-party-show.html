@@ -95,17 +95,18 @@
     .then(data => {
         console.log('sidebar 成功載入');
       document.querySelector('#sidebar .inner').innerHTML = data;
-
+      
       const scripts = [
-        '../assets/js/jquery.min.js',
-        '../assets/js/browser.min.js',
-        '../assets/js/breakpoints.min.js',
-        '../assets/js/util.js',
-        '../assets/js/main.js'
+        '/assets/js/jquery.min.js',
+        '/assets/js/browser.min.js',
+        '/assets/js/breakpoints.min.js',
+        '/assets/js/util.js',
+        '/assets/js/main.js'
       ];
       scripts.forEach(src => {
         const script = document.createElement('script');
         script.src = src;
+        script.onload = () => console.log(src + ' 載入完成'); // ← 加這一行
         document.body.appendChild(script);
       });
     })
