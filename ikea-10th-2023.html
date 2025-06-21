@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <title>IKEA 台中十週年親子活動紀錄｜氣球大叔 Sony 氣球魔術秀 × 品牌互動亮點</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="氣球大叔 Sony 於 IKEA 台中十週年慶帶來親子氣球魔術表演，結合氣球創作、現場互動與品牌主題，成為台中親子活動中的人氣亮點演出。" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://balloonsony.com/ikea-10th-2023.html" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,6 +35,7 @@
     }
   }
   </script>
+
   <style>
     img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
     figure { margin: 1.5em auto; text-align: center; }
@@ -42,11 +44,17 @@
       img { max-width: 800px; margin: 0 0 1em 20px; }
       figure { max-width: 800px; margin-left: 20px; text-align: left; }
     }
+
+    @media (min-width: 981px) {
+      #sidebar .toggle {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body class="is-preload">
+
   <div id="wrapper">
-    <!-- 主內容 -->
     <div id="main">
       <div class="inner">
         <header>
@@ -87,35 +95,30 @@
 
           <blockquote>「這場表演太精彩了！孩子們開心極了，連我們 IKEA 同仁都拍手叫好～」－ IKEA 台中活動負責人</blockquote>
 
-          <p> 
-  氣球大叔 Sony 的活動紀錄，橫跨 <strong>台北、新北、桃園、新竹、台中、基隆</strong> 各地，無論是 <strong>氣球魔術、手折氣球、泡泡秀、會場佈置、婚禮爆破</strong>，歡迎找找看有沒有您熟悉的活動現場！
-</p>
+          <p>氣球大叔 Sony 的活動紀錄，橫跨 <strong>台北、新北、桃園、新竹、台中、基隆</strong> 各地，無論是 <strong>氣球魔術、手折氣球、泡泡秀、會場佈置、婚禮爆破</strong>，歡迎找找看有沒有您熟悉的活動現場！</p>
           <p>👉 <a href="blog.html">回到活動足跡總覽，繼續看更多精彩紀錄</a></p>
-
         </section>
       </div>
     </div>
+  </div>
 
-    <!-- 側邊選單（引用 sidebar.html） -->
-<div id="sidebar">
-  <div class="inner"></div>
-</div>
-<script>
-  fetch('sidebar.html')
-    .then(res => res.text())
-    .then(data => {
-      document.querySelector('#sidebar .inner').innerHTML = data;
-      const script = document.createElement('script');
-      script.src = 'assets/js/main.js';
-      document.body.appendChild(script);
-    });
-</script>
-    
-  <!-- Scripts -->
+  <!-- 側邊選單（引用 sidebar.html） -->
+  <div id="sidebar"><div class="inner"></div></div>
+  <script>
+    fetch('sidebar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.querySelector('#sidebar .inner').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = 'assets/js/main.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <!-- 基本腳本 -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
