@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="manifest" href="site.webmanifest">
-
+  
   <!-- JSON-LD 結構化資料 -->
   <script type="application/ld+json">
   {
@@ -37,7 +37,7 @@
           "addressRegion": "台灣",
           "addressCountry": "TW"
         },
-        "areaServed": ["台北市", "新北市", "基隆市", "桃園市", "新竹市", "苗栗縣", "台中市"],
+        "areaServed": ["台北市","新北市","基隆市","桃園市","新竹市","苗栗縣","台中市"],
         "hasMap": "https://www.google.com/maps/place/氣球大叔+Sony｜氣球魔術・泡泡秀・會場佈置/@24.6496395,120.5743822,9z",
         "sameAs": [
           "https://www.facebook.com/BalloonSony/",
@@ -79,7 +79,8 @@
   }
   </script>
 
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>氣球大叔 Sony｜氣球魔術・泡泡秀・親子活動表演</title>
   <meta name="description" content="氣球大叔 Sony 提供全台灣氣球魔術表演、泡泡秀、造型氣球、會場佈置，服務地區包含台北、新北、基隆、桃園、新竹、台中、彰化等，歡迎到府表演洽詢。" />
   <meta name="keywords" content="氣球魔術, 泡泡秀, 親子派對, 台北氣球表演, 桃園魔術, 新北泡泡表演" />
@@ -94,8 +95,9 @@
 
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  
   <style>
-    /* 全部你原本的 CSS 都完整保留 */
+    /* 原始所有自訂 CSS 都保留 */
     .gallery {display:flex;flex-wrap:wrap;gap:2em;justify-content:center;padding:1em 0;}
     #banner + #story-cert {border-top:none!important;margin-top:-2rem!important;}
     .gallery figure {flex:1 1 45%;max-width:480px;margin:0;text-align:center;}
@@ -103,6 +105,7 @@
     .gallery img:hover {transform:scale(1.05);}
     .gallery figcaption {font-size:.9em;color:#666;margin-top:.5em;}
     @media (max-width:768px){.gallery figure{flex:1 1 100%;}}
+
     .features.flex {display:flex;flex-wrap:wrap;gap:2em;}
     .feature-card {flex:1 1 calc(50% - 2em);background:none;padding:1.5em;border-radius:.5em;color:inherit;text-decoration:none;transition:transform .3s ease;display:flex;align-items:center;gap:1.5em;}
     .feature-card:hover {transform:scale(1.05);}
@@ -110,17 +113,32 @@
     .feature-card .content h3 {margin:0 0 .4em;font-size:1.3em;}
     .feature-card .content p {margin:0;font-size:.95em;line-height:1.5;}
     @media (max-width:768px){.feature-card {flex:1 1 100%;flex-direction:column;text-align:center;}}
-    @media (min-width:981px){#sidebar{position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:1000;}#wrapper{margin-left:22em;}}
-    #banner .content{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;max-width:100%;padding:2rem 1rem .5rem 1rem;}
-    #banner .text-block{flex:1;}
-    #banner .image-block{flex:1;text-align:right;}
-    #banner .image-block img{max-width:800px;width:100%;height:auto;display:block;margin:0 auto;}
+
+    /* 🖥 桌機釘側邊，不要漢堡 */
+    @media (min-width: 981px) {
+      #sidebar {position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:1000;}
+      #wrapper {margin-left:22em;}
+      #sidebar .toggle {display: none;}
+    }
+
+    #banner .content {display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;max-width:100%;padding:2rem 1rem .5rem 1rem;}
+    #banner .text-block {flex:1;}
+    #banner .image-block {flex:1;text-align:right;}
+    #banner .image-block img {max-width:800px;width:100%;height:auto;display:block;margin:0 auto;}
     @media (max-width:768px){#banner .content{flex-direction:column;text-align:center;}#banner .image-block{order:1;text-align:center;}#banner .text-block{order:2;text-align:left;}}
+
+    /* 📷 桌機 story-cert 照片左、文字右 */
+    @media (min-width:769px) {
+      #story-cert {display:flex !important;align-items:center;gap:1em;}
+      #story-cert .story-img {flex:1 1 45%;max-width:500px;}
+      #story-cert .story-text {flex:2 1 50%;}
+    }
   </style>
 </head>
+
 <body class="is-preload">
 
-  <!-- 完整手動側邊選單 -->
+  <!-- 側邊選單（手動插入） -->
   <div id="sidebar">
     <div class="inner" style="display:flex;flex-direction:column;height:100vh;justify-content:space-between;">
       <a href="#menu" class="toggle"><span>選單</span></a>
@@ -159,18 +177,23 @@
     </div>
   </div>
 
-  <!-- 主內容區 -->
+  <!-- 主內容 -->
   <div id="wrapper">
     <div id="main"><div class="inner">
 
-      <!-- 頁首 -->
-      <header id="header"><h1>氣球大叔 Sony</h1><p>魔術、氣球、泡泡秀、會場佈置的專業表演者</p></header>
+      <!-- header -->
+      <header id="header">
+        <h1>氣球大叔 Sony</h1>
+        <p>魔術、氣球、泡泡秀、會場佈置的專業表演者</p>
+      </header>
 
       <!-- Banner + 關於我 -->
       <section id="banner" class="style1">
         <div class="content">
-          <div class="text-block"><header><h2>關於我</h2></header>
-            <p>🎈 歡樂，是可以被設計出來的。<br>我是 <strong>氣球大叔 Sony</strong>，一位熱愛帶給孩子驚喜的 <strong>氣球魔術老師</strong>，結合泡泡秀與造型氣球，到府演出讓活動現場笑聲不斷。<br>我的演出足跡遍及 <strong>基隆、台北、新北、桃園、新竹、苗栗、台中</strong>，包括百貨週年慶、抓週派對、親子日、開幕活動、學校園遊會與醫院慶典等。<br><br>表演服務包含：<strong>氣球秀、泡泡秀、親子互動演出、婚禮爆破、氣球佈置、天爆球、地爆球</strong> 等，<em>每一場都經過用心設計，安全又充滿創意。</em><br>無論您需要的是 <strong>氣球老師、泡泡表演、到府親子演出</strong>，我都用最真誠的心，讓活動現場充滿魔法與回憶。</p>
+          <div class="text-block">
+            <header><h2>關於我</h2></header>
+            <p>🎈 歡樂，是可以被設計出來的。<br>我是 <strong>氣球大叔 Sony</strong>...
+            </p>
           </div>
           <div class="image-block"><img src="images/index6.png" alt="氣球大叔 Sony 佩戴氣球帽，現場與小朋友互動" /></div>
         </div>
@@ -178,7 +201,9 @@
 
       <!-- 父女故事 + 證照 -->
       <section id="story-cert" style="margin:-4rem 1rem 0 1rem;">
-        <div class="story-img"><img src="images/sonydaughter.webp" alt="氣球大叔 Sony 與女兒的溫馨時刻，手持造型氣球行李箱" style="width:100%;height:auto;border-radius:8px;" /></div>
+        <div class="story-img">
+          <img src="images/sonydaughter.webp" alt="氣球大叔 Sony 與女兒的溫馨時刻，手持造型氣球行李箱" style="width:100%;height:auto;border-radius:8px;" />
+        </div>
         <div class="story-text">
           <p>一切的起點，是為了讓女兒開心，我親手折出第一顆氣球。當她開心大笑、眼睛彎成一條線的那瞬間，我知道——<strong>這份純粹的快樂，我想帶給更多孩子與家庭。</strong></p>
           <p>從街頭開始，我帶著行李箱與氣球一場場演出累積經驗與信任，並考取 <strong>基隆、台北、新北、桃園、新竹、台中</strong> 六縣市的街頭藝人證照。<br>每一張證照都是對安全與專業的承諾，也讓每一位家長都能安心邀演。</p>
@@ -248,12 +273,6 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>
-    function toggleSEO() {
-      const seoBlock = document.getElementById('seo-keywords');
-      seoBlock.style.display = seoBlock.style.display === 'none' || seoBlock.style.display === '' ? 'block' : 'none';
-    }
-  </script>
-
+  <script>function toggleSEO(){const e=document.getElementById("seo-keywords");e.style.display=e.style.display==="none"||e.style.display===""?"block":"none";}</script>
 </body>
 </html>
