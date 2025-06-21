@@ -455,32 +455,43 @@
   </details>
 </section>
 
-    <!-- 側邊選單（引用 sidebar.html） -->
+<!-- 側邊選單（引用 sidebar.html） -->
 <div id="sidebar">
   <div class="inner"></div>
 </div>
+
+<!-- 載入 sidebar 後再載入 main.js 和其他腳本 -->
 <script>
   fetch('sidebar.html')
     .then(res => res.text())
     .then(data => {
       document.querySelector('#sidebar .inner').innerHTML = data;
-      const script = document.createElement('script');
-      script.src = 'assets/js/main.js';
-      document.body.appendChild(script);
+
+      // 確保 sidebar 載入後才載入 main.js
+      const scripts = [
+        'assets/js/jquery.min.js',
+        'assets/js/browser.min.js',
+        'assets/js/breakpoints.min.js',
+        'assets/js/util.js',
+        'assets/js/main.js'
+      ];
+
+      scripts.forEach(src => {
+        const script = document.createElement('script');
+        script.src = src;
+        document.body.appendChild(script);
+      });
     });
 </script>
-    
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script>
-    function toggleSEO() {
-      const seoBlock = document.getElementById('seo-keywords');
-      seoBlock.style.display = (seoBlock.style.display === 'none' || seoBlock.style.display === '') ? 'block' : 'none';
-    }
-  </script>
+
+<!-- 可選：SEO 切換功能 -->
+<script>
+  function toggleSEO() {
+    const seoBlock = document.getElementById('seo-keywords');
+    seoBlock.style.display = (seoBlock.style.display === 'none' || seoBlock.style.display === '') ? 'block' : 'none';
+  }
+</script>
 
 </body>
 </html>
+
