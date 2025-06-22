@@ -6,48 +6,66 @@
   <title>找不到頁面｜氣球大叔 Sony</title>
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
     body {
-      text-align: center;
-      padding: 4em 2em;
-      background-color: #f5f7fa;
       font-family: 'Noto Sans TC', sans-serif;
-    }
-    h1 {
-      font-size: 2.2em;
+      background-color: #f0f8ff;
       color: #333;
+      text-align: center;
+      padding: 4em 1em;
+      background-image: linear-gradient(to top, #fff 60%, #d0f0ff);
     }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+
     p {
-      margin-top: 1em;
+      font-size: 1.2em;
       color: #666;
+      margin-top: 0.5em;
+      margin-bottom: 2em;
     }
-    img {
-      max-width: 280px;
-      margin-top: 2em;
-    }
+
     a.button {
       display: inline-block;
-      margin-top: 2em;
-      padding: 0.8em 1.5em;
-      background: #ff6b6b;
+      padding: 1em 2em;
+      background-color: #ff6b6b;
       color: white;
-      border-radius: 0.5em;
       text-decoration: none;
-      transition: background 0.3s ease;
+      font-size: 1.1em;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
     }
+
     a.button:hover {
-      background: #e74c3c;
+      background-color: #e74c3c;
+    }
+
+    img {
+      max-width: 300px;
+      margin-top: 2em;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
   </style>
 </head>
 <body>
 
-  <h1>🎈糟糕！這個頁面飛走了</h1>
-  <p>您造訪的頁面不存在，可能是連結錯誤，或頁面已被移除。</p>
+  <h1>🎈糟糕！氣球飛錯地方了</h1>
+  <p>您要找的頁面好像不存在，可能已經移動或飛走了～</p>
 
-  <a href="index.html" class="button">回首頁</a>
+  <a href="index.html" class="button">🎈 回到首頁</a>
 
   <div>
-    <img src="images/pic01.jpg" alt="氣球大叔 Sony 圖片" />
+    <img src="images/cover.jpg" alt="氣球大叔 Sony 圖片" />
   </div>
 
 </body>
